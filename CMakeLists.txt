@@ -25,6 +25,27 @@ endif()
 
 message(STATUS "CMAKE_BUILD_TYPE: ${CMAKE_BUILD_TYPE}")
 
+# Force verbose makefiles to see compiler commands
+set(CMAKE_VERBOSE_MAKEFILE ON CACHE BOOL "Verbose build" FORCE)
+
+# Check and enable AVX2
+message(STATUS "Checking architecture for AVX2 support...")
+message(STATUS "CMAKE_SYSTEM_PROCESSOR: ${CMAKE_SYSTEM_PROCESSOR}")
+message(STATUS "CMAKE_OSX_ARCHITECTURES: ${CMAKE_OSX_ARCHITECTURES}")
+message(STATUS "CMAKE_CXX_COMPILER_ID: ${CMAKE_CXX_COMPILER_ID}")
+message(STATUS "CMAKE_CXX_COMPILER_VERSION: ${CMAKE_CXX_COMPILER_VERSION}")
+
+if((CMAKE_SYSTEM_PROCESSOR MATCHES "x86_64|amd64|AMD64") OR (CMAKE_OSX_ARCHITECTURES MATCHES "x86_64"))
+  message(STATUS "Enabling AVX2 flags")
+  if(MSVC)
+    add_compile_options(/arch:AVX2)
+  else()
+    add_compile_options(-mavx2)
+  endif()
+else()
+  message(STATUS "AVX2 flags NOT enabled")
+endif()
+
 # Enable FetchContent to download dependencies at configure time
 include(FetchContent)
 
@@ -65,19 +86,7 @@ include(CXXFeatures)
 # Generate position independent code by default
 set(CMAKE_POSITION_INDEPENDENT_CODE ON CACHE INTERNAL "")
 
-# Enable AVX2 for x86_64 builds to improve performance
-message(STATUS "Checking architecture for AVX2 support...")
-message(STATUS "CMAKE_SYSTEM_PROCESSOR: ${CMAKE_SYSTEM_PROCESSOR}")
-message(STATUS "CMAKE_OSX_ARCHITECTURES: ${CMAKE_OSX_ARCHITECTURES}")
-if((CMAKE_SYSTEM_PROCESSOR MATCHES "x86_64|amd64|AMD64") OR (CMAKE_OSX_ARCHITECTURES MATCHES "x86_64"))
-  if(MSVC)
-    add_compile_options(/arch:AVX2)
-  else()
-    add_compile_options(-mavx2)
-  endif()
-else()
-  message(STATUS "AVX2 flags NOT enabled")
-endif()
+
 
 
 
