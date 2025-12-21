@@ -66,12 +66,17 @@ include(CXXFeatures)
 set(CMAKE_POSITION_INDEPENDENT_CODE ON CACHE INTERNAL "")
 
 # Enable AVX2 for x86_64 builds to improve performance
+message(STATUS "Checking architecture for AVX2 support...")
+message(STATUS "CMAKE_SYSTEM_PROCESSOR: ${CMAKE_SYSTEM_PROCESSOR}")
+message(STATUS "CMAKE_OSX_ARCHITECTURES: ${CMAKE_OSX_ARCHITECTURES}")
 if((CMAKE_SYSTEM_PROCESSOR MATCHES "x86_64|amd64|AMD64") OR (CMAKE_OSX_ARCHITECTURES MATCHES "x86_64"))
   if(MSVC)
     add_compile_options(/arch:AVX2)
   else()
     add_compile_options(-mavx2)
   endif()
+else()
+  message(STATUS "AVX2 flags NOT enabled")
 endif()
 
 
