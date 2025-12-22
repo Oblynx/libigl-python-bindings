@@ -10,7 +10,7 @@ project(pyigl)
 
 # For std::filesystem::path (generic_string)
 set(CMAKE_OSX_DEPLOYMENT_TARGET "10.15")
-# ≥17 for return value optimization 
+# ≥17 for return value optimization
 # <20 for embree
 set(CMAKE_CXX_STANDARD 17)
 
@@ -24,6 +24,27 @@ if (NOT CMAKE_BUILD_TYPE AND NOT CMAKE_CONFIGURATION_TYPES)
 endif()
 
 message(STATUS "CMAKE_BUILD_TYPE: ${CMAKE_BUILD_TYPE}")
+
+# Force verbose makefiles to see compiler commands
+set(CMAKE_VERBOSE_MAKEFILE ON CACHE BOOL "Verbose build" FORCE)
+
+# Check and enable AVX2
+message(STATUS "Checking architecture for AVX2 support...")
+message(STATUS "CMAKE_SYSTEM_PROCESSOR: ${CMAKE_SYSTEM_PROCESSOR}")
+message(STATUS "CMAKE_OSX_ARCHITECTURES: ${CMAKE_OSX_ARCHITECTURES}")
+message(STATUS "CMAKE_CXX_COMPILER_ID: ${CMAKE_CXX_COMPILER_ID}")
+message(STATUS "CMAKE_CXX_COMPILER_VERSION: ${CMAKE_CXX_COMPILER_VERSION}")
+
+if((CMAKE_SYSTEM_PROCESSOR MATCHES "x86_64|amd64|AMD64") OR (CMAKE_OSX_ARCHITECTURES MATCHES "x86_64"))
+  message(STATUS "Enabling AVX2 flags")
+  if(MSVC)
+    set(PYIGL_EXTRA_COMPILE_OPTIONS /arch:AVX2)
+  else()
+    set(PYIGL_EXTRA_COMPILE_OPTIONS -mavx2 -mfma)
+  endif()
+else()
+  message(STATUS "AVX2 flags NOT enabled")
+endif()
 
 # Enable FetchContent to download dependencies at configure time
 include(FetchContent)
@@ -64,6 +85,8 @@ include(CXXFeatures)
 
 # Generate position independent code by default
 set(CMAKE_POSITION_INDEPENDENT_CODE ON CACHE INTERNAL "")
+
+
 
 
 
@@ -122,9 +145,13 @@ function(pyigl_include prefix name)
 
     set(target_name "pyigl${prefix_lc}_${name}")
     nanobind_add_module(
-      ${target_name} 
+      ${target_name}
       STABLE_ABI
       ${sources})
+
+    if(PYIGL_EXTRA_COMPILE_OPTIONS)
+      target_compile_options(${target_name} PRIVATE ${PYIGL_EXTRA_COMPILE_OPTIONS})
+    endif()
 
     # important for scikit-build
     install(TARGETS ${target_name} LIBRARY DESTINATION  "igl/${subpath}")
@@ -142,7 +169,7 @@ function(pyigl_include prefix name)
     file(WRITE "${output_dir}/__init__.py" "from .${target_name} import *\n")
     install(FILES "${output_dir}/__init__.py" DESTINATION "igl/${subpath}")
 
-    set_target_properties(${target_name} PROPERTIES 
+    set_target_properties(${target_name} PROPERTIES
         LIBRARY_OUTPUT_DIRECTORY         "${output_dir}"
         RUNTIME_OUTPUT_DIRECTORY         "${output_dir}"
         LIBRARY_OUTPUT_DIRECTORY_RELEASE "${output_dir}"
@@ -182,6 +209,3 @@ endif()
 if(LIBIGL_RESTRICTED_TRIANGLE)
   pyigl_include("restricted" "triangle")
 endif()
-
-
-
