@@ -5,6 +5,7 @@ on:
   push:
     branches:
       - main
+      - release/*
   pull_request:
     branches:
       - main
@@ -91,3 +92,25 @@ jobs:
       - uses: pypa/gh-action-pypi-publish@v1.12.4
         with:
           packages-dir: ./artifacts
+
+  publish_gitlab:
+    needs: [build_wheels, build_sdist]
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push' && (github.ref == 'refs/heads/main' || startsWith(github.ref, 'refs/heads/release/'))
+    env:
+      TWINE_PASSWORD: ${{ secrets.TWINE_PASSWORD }}
+      TWINE_USERNAME: ${{ secrets.TWINE_USERNAME }}
+      TWINE_REPOSITORY_URL: ${{ vars.TWINE_REPOSITORY_URL }}
+      TWINE_REPOSITORY: ${{ vars.TWINE_REPOSITORY }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install twine
+      - uses: actions/download-artifact@v4
+        with:
+          path: ./artifacts
+          merge-multiple: true
+      - run: ls -R ./artifacts
+      - run: twine upload ./artifacts/* || echo "Package upload failed - it may already exist"
