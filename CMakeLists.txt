@@ -38,9 +38,9 @@ message(STATUS "CMAKE_CXX_COMPILER_VERSION: ${CMAKE_CXX_COMPILER_VERSION}")
 if((CMAKE_SYSTEM_PROCESSOR MATCHES "x86_64|amd64|AMD64") OR (CMAKE_OSX_ARCHITECTURES MATCHES "x86_64"))
   message(STATUS "Enabling AVX2 flags")
   if(MSVC)
-    add_compile_options(/arch:AVX2)
+    set(PYIGL_EXTRA_COMPILE_OPTIONS /arch:AVX2)
   else()
-    add_compile_options(-mavx2)
+    set(PYIGL_EXTRA_COMPILE_OPTIONS -mavx2 -mfma)
   endif()
 else()
   message(STATUS "AVX2 flags NOT enabled")
@@ -148,6 +148,10 @@ function(pyigl_include prefix name)
       ${target_name}
       STABLE_ABI
       ${sources})
+
+    if(PYIGL_EXTRA_COMPILE_OPTIONS)
+      target_compile_options(${target_name} PRIVATE ${PYIGL_EXTRA_COMPILE_OPTIONS})
+    endif()
 
     # important for scikit-build
     install(TARGETS ${target_name} LIBRARY DESTINATION  "igl/${subpath}")
