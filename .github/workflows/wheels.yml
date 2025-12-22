@@ -27,20 +27,21 @@ jobs:
           path: dist/*.tar.gz
 
   build_wheels:
-    runs-on: ${{ matrix.os }}
+    runs-on: ${{ matrix.runner }}
     strategy:
       fail-fast: false
       matrix:
-        os: [ubuntu-24.04, ubuntu-24.04-arm, macos-14]  # Use specific versions for clarity
-        arch: [x86_64, arm64]
         pybuilds: [cp311] # Define pybuilds at the top level
-        exclude:
-          - os: ubuntu-24.04-arm
-            arch: x86_64
+        include:
           - os: ubuntu-24.04
+            arch: x86_64
+            runner: az-k8s-cpu-large
+          - os: ubuntu-24.04-arm
             arch: arm64
-          - os: macos-14   # Exclude macOS 14 (Sonoma)
-            arch: x86_64   # Exclude x86_64 explicitly
+            runner: az-k8s-cpu-large-arm64
+          - os: macos-14
+            arch: arm64
+            runner: macos-14
 
     name: >
       ${{ matrix.pybuilds }} ${{ matrix.os }} ${{ matrix.arch }}
