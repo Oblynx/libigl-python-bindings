@@ -103,8 +103,14 @@ void bind_AABB(nb::module_ &m)
     .def("intersect_ray_first",&pyigl::intersect_ray_first<AABBN3>, "V"_a, "Ele"_a, "orig"_a, "dir"_a, "min_t"_a=std::numeric_limits<Numeric>::infinity())
     .def("intersect_ray",&pyigl::intersect_ray<AABBN3>, "V"_a, "Ele"_a, "orig"_a, "dir"_a)
     ;
+
+  typedef igl::AABB<Eigen::MatrixXN,3> AABBN3_Copy;
+  nb::class_<AABBN3_Copy>(m, "AABB_Copy")
+    .def(nb::init<>())
+    .def("init", &pyigl::aabb_init<AABBN3_Copy>, "V"_a, "Ele"_a)
+    .def("find", &pyigl::find<AABBN3_Copy>, "V"_a, "Ele"_a, "q"_a, "first"_a=false)
+    .def("squared_distance", &pyigl::squared_distance<AABBN3_Copy>, "V"_a, "Ele"_a, "P"_a)
+    .def("intersect_ray_first",&pyigl::intersect_ray_first<AABBN3_Copy>, "V"_a, "Ele"_a, "orig"_a, "dir"_a, "min_t"_a=std::numeric_limits<Numeric>::infinity())
+    .def("intersect_ray",&pyigl::intersect_ray<AABBN3_Copy>, "V"_a, "Ele"_a, "orig"_a, "dir"_a)
+    ;
 }
-
-
-
-
