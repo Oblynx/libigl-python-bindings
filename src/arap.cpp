@@ -14,12 +14,12 @@ using namespace nb::literals;
 namespace pyigl
 {
   auto arap_precomputation(
-    const nb::DRef<const Eigen::MatrixXN> &V,
-    const nb::DRef<const Eigen::MatrixXI> &F,
+    const nb::DRef1<const Eigen::MatrixXN> &V,
+    const nb::DRef1<const Eigen::MatrixXI> &F,
     const int dim,
     // Will be cast to int32_t in arap, so avoid potential double copy if passed
     // as int32_t
-    const nb::DRef<const Eigen::VectorXi> &b, 
+    const nb::DRef1<const Eigen::VectorXi> &b, 
     igl::ARAPData &data)
   {
     if(!igl::arap_precomputation(V,F,dim,b,data))
@@ -29,9 +29,9 @@ namespace pyigl
   }
 
   auto arap_solve(
-    const nb::DRef<const Eigen::MatrixXN> & bc, 
+    const nb::DRef1<const Eigen::MatrixXN> & bc, 
     igl::ARAPData &data,
-    const nb::DRef<const Eigen::MatrixXN> & U0)
+    const nb::DRef1<const Eigen::MatrixXN> & U0)
   {
     // igl::arap_solve expects U to be both the initial guess and the output 
     // not sure how to avoid this copy

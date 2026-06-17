@@ -10,14 +10,14 @@ using namespace nb::literals;
 namespace pyigl
 {
   // Wrapper for boundary_loop that returns all loops as a vector of vectors
-  auto boundary_loop_all(const nb::DRef<const Eigen::MatrixXI> &F)
+  auto boundary_loop_all(const nb::DRef1<const Eigen::MatrixXI> &F)
   {
     std::vector<std::vector<Integer>> loops;
     igl::boundary_loop(F, loops);
     return loops;
   }
   // Wrapper for boundary_loop that returns all loops as a vector of vectors
-  auto boundary_loop(const nb::DRef<const Eigen::MatrixXI> &F)
+  auto boundary_loop(const nb::DRef1<const Eigen::MatrixXI> &F)
   {
     Eigen::VectorXI longest;
     igl::boundary_loop(F, longest);

@@ -12,8 +12,8 @@ using namespace nb::literals;
 namespace pyigl
 {
   auto intrinsic_delaunay_cotmatrix(
-    const nb::DRef<const Eigen::MatrixXN> &V,
-    const nb::DRef<const Eigen::MatrixXI> &F)
+    const nb::DRef1<const Eigen::MatrixXN> &V,
+    const nb::DRef1<const Eigen::MatrixXI> &F)
   {
     Eigen::SparseMatrixN L;
     Eigen::MatrixXN il;

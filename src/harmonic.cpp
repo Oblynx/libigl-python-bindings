@@ -11,10 +11,10 @@ namespace pyigl
 {
   // Wrapper for the harmonic function
   auto harmonic(
-    const nb::DRef<const Eigen::MatrixXN> &V,
-    const nb::DRef<const Eigen::MatrixXI> &F,
-    const nb::DRef<const Eigen::VectorXI> &b,
-    const nb::DRef<const Eigen::MatrixXN> &bc,
+    const nb::DRef1<const Eigen::MatrixXN> &V,
+    const nb::DRef1<const Eigen::MatrixXI> &F,
+    const nb::DRef1<const Eigen::VectorXI> &b,
+    const nb::DRef1<const Eigen::MatrixXN> &bc,
     const int k)
   {
     Eigen::MatrixXN W;

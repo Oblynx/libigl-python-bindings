@@ -10,8 +10,8 @@ using namespace nb::literals;
 namespace pyigl
 {
   auto face_areas(
-    const nb::DRef<const Eigen::MatrixXN>& V,
-    const nb::DRef<const Eigen::MatrixXI>& T)
+    const nb::DRef1<const Eigen::MatrixXN>& V,
+    const nb::DRef1<const Eigen::MatrixXI>& T)
   {
     Eigen::MatrixXN A;
     igl::face_areas(V, T, A);

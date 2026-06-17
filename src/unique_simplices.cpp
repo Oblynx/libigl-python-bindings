@@ -10,7 +10,7 @@ using namespace nb::literals;
 namespace pyigl
 {
   // Wrapper for unique_simplices with overload handling
-  auto unique_simplices( const nb::DRef<const Eigen::MatrixXI> &F)
+  auto unique_simplices( const nb::DRef1<const Eigen::MatrixXI> &F)
   {
     Eigen::MatrixXI FF;
     Eigen::VectorXI IA,IC;

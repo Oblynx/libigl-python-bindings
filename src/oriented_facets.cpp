@@ -10,7 +10,7 @@ using namespace nb::literals;
 namespace pyigl
 {
   // Wrapper for oriented_facets
-  Eigen::MatrixXI oriented_facets(const nb::DRef<const Eigen::MatrixXI> &F)
+  Eigen::MatrixXI oriented_facets(const nb::DRef1<const Eigen::MatrixXI> &F)
   {
     Eigen::MatrixXI E;
     igl::oriented_facets(F, E);

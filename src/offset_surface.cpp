@@ -11,8 +11,8 @@ using namespace nb::literals;
 
 namespace pyigl {
   auto offset_surface(
-    const nb::DRef<const Eigen::MatrixXN> &V,
-    const nb::DRef<const Eigen::MatrixXI> &F,
+    const nb::DRef1<const Eigen::MatrixXN> &V,
+    const nb::DRef1<const Eigen::MatrixXI> &F,
     const Numeric isolevel, 
     const Integer s,
     const igl::SignedDistanceType signed_distance_type) 

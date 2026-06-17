@@ -10,14 +10,14 @@ using namespace nb::literals;
 namespace pyigl
 {
   auto pseudonormal_test(
-    const nb::DRef<const Eigen::MatrixXN> &V,
-    const nb::DRef<const Eigen::MatrixXI> &F,
-    const nb::DRef<const Eigen::MatrixXN> &FN,
-    const nb::DRef<const Eigen::MatrixXN> &VN,
-    const nb::DRef<const Eigen::MatrixXN> &EN,
-    const nb::DRef<const Eigen::MatrixXI> &EMAP,
-    const nb::DRef<const Eigen::MatrixXN> &q,
-    const nb::DRef<const Eigen::MatrixXN> &c_in,
+    const nb::DRef1<const Eigen::MatrixXN> &V,
+    const nb::DRef1<const Eigen::MatrixXI> &F,
+    const nb::DRef1<const Eigen::MatrixXN> &FN,
+    const nb::DRef1<const Eigen::MatrixXN> &VN,
+    const nb::DRef1<const Eigen::MatrixXN> &EN,
+    const nb::DRef1<const Eigen::MatrixXI> &EMAP,
+    const nb::DRef1<const Eigen::MatrixXN> &q,
+    const nb::DRef1<const Eigen::MatrixXN> &c_in,
     const int f)
   {
     // EMAP uses single-index access — needs VectorXI

@@ -12,8 +12,8 @@ using namespace nb::literals;
 namespace pyigl
 {
   auto curved_hessian_energy(
-    const nb::DRef<const Eigen::MatrixXN> &V,
-    const nb::DRef<const Eigen::MatrixXI> &F)
+    const nb::DRef1<const Eigen::MatrixXN> &V,
+    const nb::DRef1<const Eigen::MatrixXI> &F)
   {
     Eigen::SparseMatrixN Q;
     igl::curved_hessian_energy(V,F,Q);

@@ -11,8 +11,8 @@ using namespace nb::literals;
 namespace pyigl
 {
   void heat_geodesics_precompute_t(
-    const nb::DRef<const Eigen::MatrixXN>  &V,
-    const nb::DRef<const Eigen::MatrixXI>  &F,
+    const nb::DRef1<const Eigen::MatrixXN>  &V,
+    const nb::DRef1<const Eigen::MatrixXI>  &F,
     const Numeric t,
     igl::HeatGeodesicsData<Numeric> &data)
   {
@@ -23,8 +23,8 @@ namespace pyigl
   }
   // Obnoxious way to have optional t
   void heat_geodesics_precompute(
-    const nb::DRef<const Eigen::MatrixXN>  &V,
-    const nb::DRef<const Eigen::MatrixXI>  &F,
+    const nb::DRef1<const Eigen::MatrixXN>  &V,
+    const nb::DRef1<const Eigen::MatrixXI>  &F,
     igl::HeatGeodesicsData<Numeric> &data)
   {
     if(!igl::heat_geodesics_precompute(V,F,data))
@@ -35,7 +35,7 @@ namespace pyigl
 
   auto heat_geodesics_solve(
     const igl::HeatGeodesicsData<Numeric> &data,
-    const nb::DRef<const Eigen::VectorXI> &gamma)
+    const nb::DRef1<const Eigen::VectorXI> &gamma)
   {
     Eigen::VectorXN D;
     igl::heat_geodesics_solve(data, gamma, D);

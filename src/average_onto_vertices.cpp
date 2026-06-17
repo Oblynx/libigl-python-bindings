@@ -10,9 +10,9 @@ using namespace nb::literals;
 namespace pyigl
 {
   auto average_onto_vertices(
-    const nb::DRef<const Eigen::MatrixXN> &V,
-    const nb::DRef<const Eigen::MatrixXI> &F,
-    const nb::DRef<const Eigen::VectorXN> &S)
+    const nb::DRef1<const Eigen::MatrixXN> &V,
+    const nb::DRef1<const Eigen::MatrixXI> &F,
+    const nb::DRef1<const Eigen::VectorXN> &S)
   {
     Eigen::VectorXN SV;
     igl::average_onto_vertices(V,F,S,SV);

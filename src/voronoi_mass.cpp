@@ -9,8 +9,8 @@ using namespace nb::literals;
 namespace pyigl
 {
   auto voronoi_mass(
-    const nb::DRef<const Eigen::MatrixXN> &V,
-    const nb::DRef<const Eigen::MatrixXI> &T)
+    const nb::DRef1<const Eigen::MatrixXN> &V,
+    const nb::DRef1<const Eigen::MatrixXI> &T)
   {
     Eigen::VectorXN M;
     igl::voronoi_mass(V, T, M);

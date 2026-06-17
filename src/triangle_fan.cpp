@@ -10,7 +10,7 @@ using namespace nb::literals;
 namespace pyigl
 {
   auto triangle_fan(
-    const nb::DRef<const Eigen::MatrixXI> & E)
+    const nb::DRef1<const Eigen::MatrixXI> & E)
   {
     Eigen::MatrixXI cap;
     igl::triangle_fan(E, cap);

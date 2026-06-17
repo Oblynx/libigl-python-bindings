@@ -12,8 +12,8 @@ using namespace nb::literals;
 namespace pyigl
 {
   auto avg_edge_length(
-    const nb::DRef<const Eigen::MatrixXN> &V,
-    const nb::DRef<const Eigen::MatrixXI> &F)
+    const nb::DRef1<const Eigen::MatrixXN> &V,
+    const nb::DRef1<const Eigen::MatrixXI> &F)
   {
     return (Numeric)igl::avg_edge_length(V,F);
   }

@@ -11,7 +11,7 @@ using namespace nb::literals;
 namespace pyigl
 {
   auto orient_halfedges(
-    const nb::DRef<const Eigen::MatrixXI> &F)
+    const nb::DRef1<const Eigen::MatrixXI> &F)
   {
     Eigen::MatrixXI E,oE;
     igl::orient_halfedges(F,E,oE);

@@ -13,9 +13,9 @@ namespace pyigl
 {
   // Binding for the first overload of edge_flaps with `uE` and `EMAP` as inputs
   auto edge_flaps(
-    const nb::DRef<const Eigen::MatrixXI> &F,
-    const nb::DRef<const Eigen::MatrixXI> &uE,
-    const nb::DRef<const Eigen::VectorXI> &EMAP)
+    const nb::DRef1<const Eigen::MatrixXI> &F,
+    const nb::DRef1<const Eigen::MatrixXI> &uE,
+    const nb::DRef1<const Eigen::VectorXI> &EMAP)
   {
     Eigen::MatrixXI EF, EI;
     igl::edge_flaps(F, uE, EMAP, EF, EI);
@@ -24,7 +24,7 @@ namespace pyigl
 
   // Binding for the second overload of edge_flaps where `uE` and `EMAP` are outputs
   auto edge_flaps_F(
-    const nb::DRef<const Eigen::MatrixXI> &F)
+    const nb::DRef1<const Eigen::MatrixXI> &F)
   {
     Eigen::MatrixXI uE, EF, EI;
     Eigen::VectorXI EMAP;

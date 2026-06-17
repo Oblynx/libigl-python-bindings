@@ -9,7 +9,7 @@ using namespace nb::literals;
 void bind_euler_characteristic(nb::module_ &m)
 {
   m.def("euler_characteristic",
-    [](const nb::DRef<const Eigen::MatrixXI> &F) -> int {
+    [](const nb::DRef1<const Eigen::MatrixXI> &F) -> int {
       return igl::euler_characteristic(F);
     },
     "F"_a,

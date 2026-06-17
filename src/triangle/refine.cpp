@@ -11,9 +11,9 @@ using namespace nb::literals;
 namespace pyigl
 {
   auto refine(
-    const nb::DRef<const Eigen::MatrixXN> &V,
-    const nb::DRef<const Eigen::MatrixXI> &E,
-    const nb::DRef<const Eigen::MatrixXI> &F,
+    const nb::DRef1<const Eigen::MatrixXN> &V,
+    const nb::DRef1<const Eigen::MatrixXI> &E,
+    const nb::DRef1<const Eigen::MatrixXI> &F,
     const std::string &flags)
   {
     Eigen::MatrixXN V2;

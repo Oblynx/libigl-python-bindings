@@ -9,8 +9,8 @@ using namespace nb::literals;
 namespace pyigl
 {
   auto per_vertex_attribute_smoothing(
-    const nb::DRef<const Eigen::MatrixXN> &Ain,
-    const nb::DRef<const Eigen::MatrixXI> &F)
+    const nb::DRef1<const Eigen::MatrixXN> &Ain,
+    const nb::DRef1<const Eigen::MatrixXI> &F)
   {
     // Aout must be same DerivedV as Ain — copy Ain to MatrixXN so both are plain types
     Eigen::MatrixXN ain = Ain, Aout;

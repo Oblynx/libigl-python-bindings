@@ -10,7 +10,7 @@ using namespace nb::literals;
 namespace pyigl
 {
   // Wrapper for adjacency_matrix with simplicial mesh (F)
-  auto adjacency_matrix(const nb::DRef<const Eigen::MatrixXI> &F)
+  auto adjacency_matrix(const nb::DRef1<const Eigen::MatrixXI> &F)
   {
     Eigen::SparseMatrixI A;
     igl::adjacency_matrix(F, A);
@@ -19,8 +19,8 @@ namespace pyigl
 
   // Wrapper for adjacency_matrix with polygonal mesh (I, C)
   auto adjacency_matrix_polygon(
-    const nb::DRef<const Eigen::VectorXI> &I,
-    const nb::DRef<const Eigen::VectorXI> &C)
+    const nb::DRef1<const Eigen::VectorXI> &I,
+    const nb::DRef1<const Eigen::VectorXI> &C)
   {
     Eigen::SparseMatrixI A;
     igl::adjacency_matrix(I, C, A);

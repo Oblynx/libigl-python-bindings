@@ -13,7 +13,7 @@ namespace pyigl
   // Wrapper for writeDMAT with Eigen matrix input
   bool writeDMAT(
     const std::filesystem::path &file_name,
-    const nb::DRef<const Eigen::MatrixXN> &W, 
+    const nb::DRef1<const Eigen::MatrixXN> &W, 
     const bool ascii)
   {
     if (!igl::writeDMAT(file_name.generic_string(), W, ascii))

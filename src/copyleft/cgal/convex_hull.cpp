@@ -10,7 +10,7 @@ using namespace nb::literals;
 namespace pyigl
 {
   // Second overload: convex_hull with only output F
-  auto convex_hull(const nb::DRef<const Eigen::MatrixXN> &V)
+  auto convex_hull(const nb::DRef1<const Eigen::MatrixXN> &V)
   {
     Eigen::MatrixXI F;
     igl::copyleft::cgal::convex_hull(V, F);

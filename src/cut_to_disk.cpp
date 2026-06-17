@@ -10,7 +10,7 @@ namespace nb = nanobind;
 using namespace nb::literals;
 namespace pyigl
 {
-  auto cut_to_disk( const nb::DRef<const Eigen::MatrixXI> & F)
+  auto cut_to_disk( const nb::DRef1<const Eigen::MatrixXI> & F)
   {
     std::vector<std::vector<Integer>> cuts;
     igl::cut_to_disk(F, cuts);

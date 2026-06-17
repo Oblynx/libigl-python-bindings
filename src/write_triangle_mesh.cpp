@@ -13,8 +13,8 @@ namespace pyigl
 {
   void write_triangle_mesh(
     const std::filesystem::path & filename,
-    const nb::DRef<const Eigen::MatrixXN> V,
-    const nb::DRef<const Eigen::MatrixXI> F,
+    const nb::DRef1<const Eigen::MatrixXN> V,
+    const nb::DRef1<const Eigen::MatrixXI> F,
     const igl::FileEncoding encoding_enum)
   {
     // Throw an error if entries in F are bigger than can be cast to int32_t

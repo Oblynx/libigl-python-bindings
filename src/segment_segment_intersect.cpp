@@ -10,10 +10,10 @@ using namespace nb::literals;
 namespace pyigl
 {
   auto segment_segment_intersect(
-    const nb::DRef<const Eigen::MatrixXN> &p,
-    const nb::DRef<const Eigen::MatrixXN> &r,
-    const nb::DRef<const Eigen::MatrixXN> &q,
-    const nb::DRef<const Eigen::MatrixXN> &s,
+    const nb::DRef1<const Eigen::MatrixXN> &p,
+    const nb::DRef1<const Eigen::MatrixXN> &r,
+    const nb::DRef1<const Eigen::MatrixXN> &q,
+    const nb::DRef1<const Eigen::MatrixXN> &s,
     const double eps)
   {
     // igl uses .cross() which requires SizeAtCompileTime==3 — copy to Vector3d

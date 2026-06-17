@@ -13,12 +13,12 @@ namespace pyigl
 {
   void writeOBJ(
     const std::filesystem::path & filename,
-    const nb::DRef<const Eigen::MatrixXN> &V,
-    const nb::DRef<const Eigen::MatrixXI> &F,
-    const nb::DRef<const Eigen::MatrixXN> &CN,
-    const nb::DRef<const Eigen::MatrixXI> &FN,
-    const nb::DRef<const Eigen::MatrixXN> &TC,
-    const nb::DRef<const Eigen::MatrixXI> &FTC)
+    const nb::DRef1<const Eigen::MatrixXN> &V,
+    const nb::DRef1<const Eigen::MatrixXI> &F,
+    const nb::DRef1<const Eigen::MatrixXN> &CN,
+    const nb::DRef1<const Eigen::MatrixXI> &FN,
+    const nb::DRef1<const Eigen::MatrixXN> &TC,
+    const nb::DRef1<const Eigen::MatrixXI> &FTC)
   {
     if(!igl::writeOBJ(filename.generic_string(),V,F,CN,FN,TC,FTC))
     {

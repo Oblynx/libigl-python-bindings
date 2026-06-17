@@ -11,7 +11,7 @@ namespace pyigl
 {
   // Full decomposition: R, T, U, S, V
   auto polar_dec_full(
-    const nb::DRef<const Eigen::MatrixXN> &A,
+    const nb::DRef1<const Eigen::MatrixXN> &A,
     const bool includeReflections)
   {
     // SelfAdjointEigenSolver requires non-Ref type — copy to MatrixXd
@@ -22,7 +22,7 @@ namespace pyigl
   }
   // Simple: just R and T
   auto polar_dec_RT(
-    const nb::DRef<const Eigen::MatrixXN> &A,
+    const nb::DRef1<const Eigen::MatrixXN> &A,
     const bool includeReflections)
   {
     Eigen::MatrixXd a = A;

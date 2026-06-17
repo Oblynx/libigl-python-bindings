@@ -11,7 +11,7 @@ namespace pyigl
 {
   // Wrapper for is_vertex_manifold with overload handling
   auto is_vertex_manifold(
-    const nb::DRef<const Eigen::MatrixXI> &F)
+    const nb::DRef1<const Eigen::MatrixXI> &F)
   {
     Eigen::Matrix<bool, Eigen::Dynamic, 1> B;
     igl::is_vertex_manifold(F, B);

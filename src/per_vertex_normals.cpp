@@ -13,8 +13,8 @@ using namespace nb::literals;
 namespace pyigl
 {
   auto per_vertex_normals(
-    const nb::DRef<const Eigen::MatrixXN> &V,
-    const nb::DRef<const Eigen::MatrixXI> &F,
+    const nb::DRef1<const Eigen::MatrixXN> &V,
+    const nb::DRef1<const Eigen::MatrixXI> &F,
     const igl::PerVertexNormalsWeightingType weight_enum)
   {
     Eigen::MatrixXN N;
@@ -22,10 +22,10 @@ namespace pyigl
     return N;
   }
   auto per_vertex_normals_FN(
-    const nb::DRef<const Eigen::MatrixXN> &V,
-    const nb::DRef<const Eigen::MatrixXI> &F,
+    const nb::DRef1<const Eigen::MatrixXN> &V,
+    const nb::DRef1<const Eigen::MatrixXI> &F,
     const igl::PerVertexNormalsWeightingType weight_enum,
-    const nb::DRef<const Eigen::MatrixXN> &FN)
+    const nb::DRef1<const Eigen::MatrixXN> &FN)
   {
     Eigen::MatrixXN N;
     igl::per_vertex_normals(V, F, weight_enum, FN, N);

@@ -11,14 +11,14 @@ using namespace nb::literals;
 
 namespace pyigl
 {
-  auto triangle_triangle_adjacency( const nb::DRef<const Eigen::MatrixXI> &F)
+  auto triangle_triangle_adjacency( const nb::DRef1<const Eigen::MatrixXI> &F)
   {
     Eigen::MatrixXI TT;
     Eigen::MatrixXI TTi;
     igl::triangle_triangle_adjacency(F, TT, TTi);
     return nb::make_tuple(TT, TTi);
   }
-  auto triangle_triangle_adjacency_lists( const nb::DRef<const Eigen::MatrixXI> &F)
+  auto triangle_triangle_adjacency_lists( const nb::DRef1<const Eigen::MatrixXI> &F)
   {
     std::vector<std::vector<std::vector<Integer>>> TT;
     std::vector<std::vector<std::vector<Integer>>> TTi;

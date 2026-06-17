@@ -9,7 +9,7 @@ using namespace nb::literals;
 
 namespace pyigl
 {
-  auto vector_area_matrix(const nb::DRef<const Eigen::MatrixXI> &F)
+  auto vector_area_matrix(const nb::DRef1<const Eigen::MatrixXI> &F)
   {
     Eigen::SparseMatrix<Numeric> A;
     igl::vector_area_matrix(F, A);

@@ -11,10 +11,10 @@ using namespace nb::literals;
 namespace pyigl
 {
   auto crouzeix_raviart_massmatrix(
-    const nb::DRef<const Eigen::MatrixXN> & V,
-    const nb::DRef<const Eigen::MatrixXI> & F,
-    const nb::DRef<const Eigen::MatrixXI> & E,
-    const nb::DRef<const Eigen::VectorXI> & EMAP)
+    const nb::DRef1<const Eigen::MatrixXN> & V,
+    const nb::DRef1<const Eigen::MatrixXI> & F,
+    const nb::DRef1<const Eigen::MatrixXI> & E,
+    const nb::DRef1<const Eigen::VectorXI> & EMAP)
   {
     Eigen::SparseMatrix<Numeric> L;
     igl::crouzeix_raviart_massmatrix(V, F, E, EMAP, L);

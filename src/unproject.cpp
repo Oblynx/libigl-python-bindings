@@ -10,10 +10,10 @@ namespace pyigl
 {
   // Wrapper for unproject with batch mode
   auto unproject(
-    const nb::DRef<const Eigen::MatrixXN> &win,
-    const nb::DRef<const Eigen::MatrixXN> &model,
-    const nb::DRef<const Eigen::MatrixXN> &proj,
-    const nb::DRef<const Eigen::VectorXN> &viewport)
+    const nb::DRef1<const Eigen::MatrixXN> &win,
+    const nb::DRef1<const Eigen::MatrixXN> &model,
+    const nb::DRef1<const Eigen::MatrixXN> &proj,
+    const nb::DRef1<const Eigen::VectorXN> &viewport)
   {
     Eigen::MatrixXN scene;
     igl::unproject(win, model, proj, viewport, scene);

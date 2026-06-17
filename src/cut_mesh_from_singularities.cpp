@@ -10,9 +10,9 @@ using namespace nb::literals;
 namespace pyigl
 {
   auto cut_mesh_from_singularities(
-    const nb::DRef<const Eigen::MatrixXN> &V,
-    const nb::DRef<const Eigen::MatrixXI> &F,
-    const nb::DRef<const Eigen::MatrixXI> &MMatch)
+    const nb::DRef1<const Eigen::MatrixXN> &V,
+    const nb::DRef1<const Eigen::MatrixXI> &F,
+    const nb::DRef1<const Eigen::MatrixXI> &MMatch)
   {
     Eigen::MatrixXB seams;
     igl::cut_mesh_from_singularities(V, F, MMatch, seams);

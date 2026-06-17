@@ -10,7 +10,7 @@ using namespace nb::literals;
 namespace pyigl
 {
   auto voxel_grid(
-    const nb::DRef<const Eigen::MatrixXN> &V,
+    const nb::DRef1<const Eigen::MatrixXN> &V,
     const Numeric offset,
     const int s,
     const int pad_count)

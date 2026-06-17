@@ -11,7 +11,7 @@ using namespace nb::literals;
 namespace pyigl
 {
   auto oriented_bounding_box(
-    const nb::DRef<const Eigen::MatrixXN> &P,
+    const nb::DRef1<const Eigen::MatrixXN> &P,
     const int n,
     const igl::OrientedBoundingBoxMinimizeType minimize_type)
   {

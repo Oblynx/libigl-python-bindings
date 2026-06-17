@@ -19,7 +19,7 @@ namespace pyigl
   }
 
   auto polygon_corners_kgon(
-    const nb::DRef<const Eigen::MatrixXI> &Q)
+    const nb::DRef1<const Eigen::MatrixXI> &Q)
   {
     Eigen::VectorXI I, C;
     igl::polygon_corners(Q,I,C);

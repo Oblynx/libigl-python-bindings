@@ -12,9 +12,9 @@ namespace pyigl
 {
   // Wrapper for point_mesh_squared_distance function
   auto point_mesh_squared_distance(
-    const nb::DRef<const Eigen::MatrixXN> &P,
-    const nb::DRef<const Eigen::MatrixXN> &V,
-    const nb::DRef<const Eigen::MatrixXI> &Ele)
+    const nb::DRef1<const Eigen::MatrixXN> &P,
+    const nb::DRef1<const Eigen::MatrixXN> &V,
+    const nb::DRef1<const Eigen::MatrixXI> &Ele)
   {
     Eigen::VectorXN sqrD;
     Eigen::VectorXI I;

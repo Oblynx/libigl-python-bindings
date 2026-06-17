@@ -10,10 +10,10 @@ using namespace nb::literals;
 namespace pyigl
 {
   auto bijective_composite_harmonic_mapping(
-    const nb::DRef<const Eigen::MatrixXN> & V,
-    const nb::DRef<const Eigen::MatrixXI> & F,
-    const nb::DRef<const Eigen::VectorXI> & b,
-    const nb::DRef<const Eigen::MatrixXN> & bc,
+    const nb::DRef1<const Eigen::MatrixXN> & V,
+    const nb::DRef1<const Eigen::MatrixXI> & F,
+    const nb::DRef1<const Eigen::VectorXI> & b,
+    const nb::DRef1<const Eigen::MatrixXN> & bc,
     const int min_steps,
     const int max_steps,
     const int num_inner_iters,

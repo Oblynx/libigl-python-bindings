@@ -14,8 +14,8 @@ namespace pyigl
   // Wrapper for vertex_components with face indices
   auto random_points_on_mesh(
     const Integer n,
-    const nb::DRef<const Eigen::MatrixXN> &V,
-    const nb::DRef<const Eigen::MatrixXI> &F,
+    const nb::DRef1<const Eigen::MatrixXN> &V,
+    const nb::DRef1<const Eigen::MatrixXI> &F,
     const std::optional<int> seed)
   {
     std::mt19937 urbg = seed.has_value() ? std::mt19937(*seed) : igl::generate_default_urbg();

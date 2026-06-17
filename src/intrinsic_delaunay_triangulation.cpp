@@ -12,8 +12,8 @@ using namespace nb::literals;
 namespace pyigl
 {
   auto intrinsic_delaunay_triangulation(
-    const nb::DRef<const Eigen::MatrixXN> &l_in,
-    const nb::DRef<const Eigen::MatrixXI> &F_in)
+    const nb::DRef1<const Eigen::MatrixXN> &l_in,
+    const nb::DRef1<const Eigen::MatrixXI> &F_in)
   {
     Eigen::MatrixXN l;
     Eigen::MatrixXI F,E,uE;

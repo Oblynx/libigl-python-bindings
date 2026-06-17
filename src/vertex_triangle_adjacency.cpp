@@ -13,7 +13,7 @@ using namespace nb::literals;
 namespace pyigl
 {
   auto vertex_triangle_adjacency(
-    const nb::DRef<const Eigen::MatrixXI> &F,
+    const nb::DRef1<const Eigen::MatrixXI> &F,
     Integer n)
   {
     if(n==0 && F.size()>0)
@@ -25,7 +25,7 @@ namespace pyigl
     return std::make_tuple(VF,NI);
   }
   auto vertex_triangle_adjacency_lists(
-    const nb::DRef<const Eigen::MatrixXI> &F,
+    const nb::DRef1<const Eigen::MatrixXI> &F,
     Integer n)
   {
     if(n==0 && F.size()>0)

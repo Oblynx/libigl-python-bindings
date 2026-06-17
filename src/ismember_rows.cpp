@@ -11,8 +11,8 @@ namespace pyigl
 {
   // Wrapper for ismember_rows with simplicial mesh (F)
   auto ismember_rows(
-    const nb::DRef<const Eigen::MatrixXI> &A,
-    const nb::DRef<const Eigen::MatrixXI> &B)
+    const nb::DRef1<const Eigen::MatrixXI> &A,
+    const nb::DRef1<const Eigen::MatrixXI> &B)
   {
     Eigen::Array<bool,Eigen::Dynamic,1> IA;
     Eigen::VectorXI LOCB;

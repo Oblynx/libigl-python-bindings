@@ -10,9 +10,9 @@ using namespace nb::literals;
 namespace pyigl
 {
   auto ray_sphere_intersect(
-    const nb::DRef<const Eigen::MatrixXN> &o,
-    const nb::DRef<const Eigen::MatrixXN> &d,
-    const nb::DRef<const Eigen::MatrixXN> &c,
+    const nb::DRef1<const Eigen::MatrixXN> &o,
+    const nb::DRef1<const Eigen::MatrixXN> &d,
+    const nb::DRef1<const Eigen::MatrixXN> &c,
     const Numeric r)
   {
     // igl uses .dot() which requires IsVectorAtCompileTime — copy to VectorXd

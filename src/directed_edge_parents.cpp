@@ -8,7 +8,7 @@ using namespace nb::literals;
 
 namespace pyigl
 {
-  auto directed_edge_parents(const nb::DRef<const Eigen::MatrixXI> &E)
+  auto directed_edge_parents(const nb::DRef1<const Eigen::MatrixXI> &E)
   {
     Eigen::VectorXI P;
     igl::directed_edge_parents(E, P);

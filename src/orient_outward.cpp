@@ -10,9 +10,9 @@ using namespace nb::literals;
 namespace pyigl
 {
   auto orient_outward(
-    const nb::DRef<const Eigen::MatrixXN> &V,
-    const nb::DRef<const Eigen::MatrixXI> &F,
-    const nb::DRef<const Eigen::MatrixXI> &C)
+    const nb::DRef1<const Eigen::MatrixXN> &V,
+    const nb::DRef1<const Eigen::MatrixXI> &F,
+    const nb::DRef1<const Eigen::MatrixXI> &C)
   {
     // igl::orient_outward does &FF != &F pointer comparison — F must be plain MatrixXI
     // C is accessed with single-index C(f) — copy to VectorXI

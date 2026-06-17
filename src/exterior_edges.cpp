@@ -8,7 +8,7 @@ using namespace nb::literals;
 
 namespace pyigl
 {
-  auto exterior_edges(const nb::DRef<const Eigen::MatrixXI> &F)
+  auto exterior_edges(const nb::DRef1<const Eigen::MatrixXI> &F)
   {
     Eigen::MatrixXI E;
     igl::exterior_edges(F, E);

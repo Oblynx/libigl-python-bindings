@@ -12,7 +12,7 @@ namespace pyigl
 {
   // Binding for remove_duplicate_vertices without face remapping
   auto remove_duplicate_vertices(
-    const nb::DRef<const Eigen::MatrixXN> &V,
+    const nb::DRef1<const Eigen::MatrixXN> &V,
     const double epsilon)
   {
     Eigen::MatrixXN SV;
@@ -23,8 +23,8 @@ namespace pyigl
 
   // Binding for remove_duplicate_vertices with face remapping
   auto remove_duplicate_vertices_F(
-    const nb::DRef<const Eigen::MatrixXN> &V,
-    const nb::DRef<const Eigen::MatrixXI> &F,
+    const nb::DRef1<const Eigen::MatrixXN> &V,
+    const nb::DRef1<const Eigen::MatrixXI> &F,
     const double epsilon)
   {
     Eigen::MatrixXN SV;

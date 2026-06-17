@@ -10,7 +10,7 @@ using namespace nb::literals;
 namespace pyigl
 {
   // Wrapper for facet_components with simplicial mesh (F)
-  auto facet_components(const nb::DRef<const Eigen::MatrixXI> &F)
+  auto facet_components(const nb::DRef1<const Eigen::MatrixXI> &F)
   {
     Eigen::VectorXI C;
     const int nc = igl::facet_components(F, C);

@@ -9,8 +9,8 @@ using namespace nb::literals;
 namespace pyigl
 {
   auto is_delaunay(
-    const nb::DRef<const Eigen::MatrixXN> &V,
-    const nb::DRef<const Eigen::MatrixXI> &F)
+    const nb::DRef1<const Eigen::MatrixXN> &V,
+    const nb::DRef1<const Eigen::MatrixXI> &F)
   {
     Eigen::Array<bool, Eigen::Dynamic, Eigen::Dynamic> D;
     igl::is_delaunay(V, F, D);

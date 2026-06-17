@@ -13,7 +13,7 @@ namespace pyigl
 {
   // Binding for edges function with face-based input
   Eigen::MatrixXI edges_from_faces(
-    const nb::DRef<const Eigen::MatrixXI> &F)
+    const nb::DRef1<const Eigen::MatrixXI> &F)
   {
     Eigen::MatrixXI E;
     igl::edges(F, E);
@@ -22,8 +22,8 @@ namespace pyigl
 
   // Binding for edges function with polygon corner indices
   Eigen::MatrixXI edges_from_polygons(
-    const nb::DRef<const Eigen::VectorXI> &I, 
-    const nb::DRef<const Eigen::VectorXI> &C)
+    const nb::DRef1<const Eigen::VectorXI> &I, 
+    const nb::DRef1<const Eigen::VectorXI> &C)
   {
     Eigen::MatrixXI E;
     igl::edges(I, C, E);

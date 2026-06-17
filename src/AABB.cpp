@@ -14,17 +14,17 @@ namespace pyigl
   template <typename AABB>
   void aabb_init(
     AABB &tree,
-    const nb::DRef<const Eigen::MatrixXN> &V,
-    const nb::DRef<const Eigen::MatrixXI> &Ele)
+    const nb::DRef1<const Eigen::MatrixXN> &V,
+    const nb::DRef1<const Eigen::MatrixXI> &Ele)
   {
     tree.init(V,Ele);
   }
   template <typename AABB>
   auto find(
     AABB &tree,
-    const nb::DRef<const Eigen::MatrixXN> &V,
-    const nb::DRef<const Eigen::MatrixXI> &Ele,
-    const nb::DRef<const Eigen::RowVectorXN> &q,
+    const nb::DRef1<const Eigen::MatrixXN> &V,
+    const nb::DRef1<const Eigen::MatrixXI> &Ele,
+    const nb::DRef1<const Eigen::RowVectorXN> &q,
     const bool first)
   {
     if(Ele.cols() != V.cols()+1)
@@ -39,9 +39,9 @@ namespace pyigl
   template <typename AABB>
   auto squared_distance(
     AABB &tree,
-    const nb::DRef<const Eigen::MatrixXN> &V,
-    const nb::DRef<const Eigen::MatrixXI> &Ele,
-    const nb::DRef<const Eigen::MatrixXN> &P)
+    const nb::DRef1<const Eigen::MatrixXN> &V,
+    const nb::DRef1<const Eigen::MatrixXI> &Ele,
+    const nb::DRef1<const Eigen::MatrixXN> &P)
   {
     Eigen::VectorXN sqrD;
     Eigen::VectorXI I;
@@ -53,10 +53,10 @@ namespace pyigl
   template <typename AABB>
   auto intersect_ray_first(
     AABB &tree,
-    const nb::DRef<const Eigen::MatrixXN> &V,
-    const nb::DRef<const Eigen::MatrixXI> &Ele,
-    const nb::DRef<const Eigen::MatrixXN> &orig,
-    const nb::DRef<const Eigen::MatrixXN> &dir,
+    const nb::DRef1<const Eigen::MatrixXN> &V,
+    const nb::DRef1<const Eigen::MatrixXI> &Ele,
+    const nb::DRef1<const Eigen::MatrixXN> &orig,
+    const nb::DRef1<const Eigen::MatrixXN> &dir,
     const Numeric min_t)
   {
     Eigen::VectorXI I;
@@ -69,10 +69,10 @@ namespace pyigl
   template <typename AABB>
   auto intersect_ray(
     AABB &tree,
-    const nb::DRef<const Eigen::MatrixXN> &V,
-    const nb::DRef<const Eigen::MatrixXI> &Ele,
-    const nb::DRef<const Eigen::MatrixXN> &orig,
-    const nb::DRef<const Eigen::MatrixXN> &dir)
+    const nb::DRef1<const Eigen::MatrixXN> &V,
+    const nb::DRef1<const Eigen::MatrixXI> &Ele,
+    const nb::DRef1<const Eigen::MatrixXN> &orig,
+    const nb::DRef1<const Eigen::MatrixXN> &dir)
   {
     std::vector<std::vector<igl::Hit<Numeric>>> hits;
     tree.intersect_ray(V,Ele,orig,dir,hits);
@@ -94,7 +94,7 @@ namespace pyigl
 // Bind the wrapper to the Python module
 void bind_AABB(nb::module_ &m)
 {
-  typedef igl::AABB<nb::DRef<const Eigen::MatrixXN>,3> AABBN3;
+  typedef igl::AABB<nb::DRef1<const Eigen::MatrixXN>,3> AABBN3;
   nb::class_<AABBN3>(m, "AABB")
     .def(nb::init<>())
     .def("init", &pyigl::aabb_init<AABBN3>, "V"_a, "Ele"_a)

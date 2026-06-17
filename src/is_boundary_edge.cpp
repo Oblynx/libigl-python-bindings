@@ -11,8 +11,8 @@ namespace pyigl
 {
   // Query specific edges
   auto is_boundary_edge_query(
-    const nb::DRef<const Eigen::MatrixXI> &E,
-    const nb::DRef<const Eigen::MatrixXI> &F)
+    const nb::DRef1<const Eigen::MatrixXI> &E,
+    const nb::DRef1<const Eigen::MatrixXI> &F)
   {
     // igl uses Eigen::MatrixXi (int32) internally — cast inputs
     Eigen::MatrixXi e = E.cast<int>(), f = F.cast<int>();
@@ -22,7 +22,7 @@ namespace pyigl
   }
   // Extract all boundary edges
   auto is_boundary_edge_extract(
-    const nb::DRef<const Eigen::MatrixXI> &F)
+    const nb::DRef1<const Eigen::MatrixXI> &F)
   {
     // igl uses Eigen::MatrixXi (int32) internally — cast input and outputs
     Eigen::MatrixXi f = F.cast<int>();

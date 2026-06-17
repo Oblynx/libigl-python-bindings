@@ -12,9 +12,9 @@ namespace pyigl
 {
   // Wrapper for per_face_normals function
   auto per_face_normals_VF(
-    const nb::DRef<const Eigen::MatrixXN> &V,
-    const nb::DRef<const Eigen::MatrixXI> &F,
-    const nb::DRef<const Eigen::RowVectorXN> &Z)
+    const nb::DRef1<const Eigen::MatrixXN> &V,
+    const nb::DRef1<const Eigen::MatrixXI> &F,
+    const nb::DRef1<const Eigen::RowVectorXN> &Z)
   {
     Eigen::MatrixXN N;
     igl::per_face_normals(V,F,Z,N);
@@ -22,9 +22,9 @@ namespace pyigl
   }
   // Wrapper for per_face_normals function
   auto per_face_normals_VIC(
-    const nb::DRef<const Eigen::MatrixXN> &V,
-    const nb::DRef<const Eigen::VectorXI> &I,
-    const nb::DRef<const Eigen::VectorXI> &C)
+    const nb::DRef1<const Eigen::MatrixXN> &V,
+    const nb::DRef1<const Eigen::VectorXI> &I,
+    const nb::DRef1<const Eigen::VectorXI> &C)
   {
     Eigen::MatrixXN N;
     Eigen::MatrixXN VV;

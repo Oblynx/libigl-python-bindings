@@ -9,8 +9,8 @@ using namespace nb::literals;
 namespace pyigl
 {
   auto mvc(
-    const nb::DRef<const Eigen::MatrixXN> &V,
-    const nb::DRef<const Eigen::MatrixXN> &C)
+    const nb::DRef1<const Eigen::MatrixXN> &V,
+    const nb::DRef1<const Eigen::MatrixXN> &C)
   {
     // igl::mvc takes Eigen::MatrixXd (ColMajor) with non-const output ref
     Eigen::MatrixXd v = V, c = C;

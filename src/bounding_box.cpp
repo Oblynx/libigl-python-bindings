@@ -10,7 +10,7 @@ using namespace nb::literals;
 namespace pyigl
 {
   auto bounding_box(
-    const nb::DRef<const Eigen::MatrixXN>& V,
+    const nb::DRef1<const Eigen::MatrixXN>& V,
     const Numeric pad)
   {
     Eigen::MatrixXN BV;

@@ -11,10 +11,10 @@ using namespace nb::literals;
 namespace pyigl
 {
   auto unique_sparse_voxel_corners(
-    const nb::DRef<const Eigen::VectorXN> &origin,
+    const nb::DRef1<const Eigen::VectorXN> &origin,
     const Numeric h0,
     const Integer depth,
-    const nb::DRef<const Eigen::MatrixXI> &ijk)
+    const nb::DRef1<const Eigen::MatrixXI> &ijk)
   {
     Eigen::MatrixXI unique_ijk;
     Eigen::MatrixXI J;

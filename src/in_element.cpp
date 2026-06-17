@@ -11,10 +11,10 @@ namespace pyigl
 {
   // Wrapper for in_element with simplicial mesh (F)
   auto in_element(
-    const nb::DRef<const Eigen::MatrixXN> &V,
-    const nb::DRef<const Eigen::MatrixXI> &Ele,
-    const nb::DRef<const Eigen::MatrixXN> &Q,
-    const igl::AABB<nb::DRef<const Eigen::MatrixXN>,3> &aabb)
+    const nb::DRef1<const Eigen::MatrixXN> &V,
+    const nb::DRef1<const Eigen::MatrixXI> &Ele,
+    const nb::DRef1<const Eigen::MatrixXN> &Q,
+    const igl::AABB<nb::DRef1<const Eigen::MatrixXN>,3> &aabb)
   {
     Eigen::VectorXI I;
     igl::in_element(V,Ele,Q,aabb,I);

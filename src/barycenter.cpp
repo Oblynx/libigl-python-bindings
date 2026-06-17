@@ -11,8 +11,8 @@ namespace pyigl
 {
   // Wrapper for barycenter function
   auto barycenter(
-    const nb::DRef<const Eigen::MatrixXN> &V,
-    const nb::DRef<const Eigen::MatrixXI> &F)
+    const nb::DRef1<const Eigen::MatrixXN> &V,
+    const nb::DRef1<const Eigen::MatrixXI> &F)
   {
     Eigen::MatrixXN BC;
     igl::barycenter(V, F, BC);

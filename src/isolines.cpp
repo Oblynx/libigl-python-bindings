@@ -11,10 +11,10 @@ using namespace nb::literals;
 namespace pyigl
 {
   auto isolines(
-    const nb::DRef<const Eigen::MatrixXN> &V,
-    const nb::DRef<const Eigen::MatrixXI> &F,
-    const nb::DRef<const Eigen::VectorXN> &S,
-    const nb::DRef<const Eigen::VectorXN> &vals)
+    const nb::DRef1<const Eigen::MatrixXN> &V,
+    const nb::DRef1<const Eigen::MatrixXI> &F,
+    const nb::DRef1<const Eigen::VectorXN> &S,
+    const nb::DRef1<const Eigen::VectorXN> &vals)
   {
     Eigen::MatrixXN iV;
     Eigen::MatrixXI iE;

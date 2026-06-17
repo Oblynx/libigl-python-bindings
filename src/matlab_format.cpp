@@ -11,7 +11,7 @@ using namespace nb::literals;
 
 namespace pyigl
 {
-  std::string matlab_format_dense(const nb::DRef<const Eigen::MatrixXN> &M, const std::string &name = "")
+  std::string matlab_format_dense(const nb::DRef1<const Eigen::MatrixXN> &M, const std::string &name = "")
   {
     std::ostringstream oss;
     oss << igl::matlab_format(M, name);
@@ -28,17 +28,17 @@ namespace pyigl
     return igl::matlab_format(v, name);
   }
 
-  std::string matlab_format_index(const nb::DRef<const Eigen::MatrixXI> &M, const std::string &name = "")
+  std::string matlab_format_index(const nb::DRef1<const Eigen::MatrixXI> &M, const std::string &name = "")
   {
     return igl::matlab_format_index(M, name);
   }
   
-  std::string matlab_format_index_vector(const nb::DRef<const Eigen::VectorXI> &M, const std::string &name = "")
+  std::string matlab_format_index_vector(const nb::DRef1<const Eigen::VectorXI> &M, const std::string &name = "")
   {
     return igl::matlab_format_index(M, name);
   }
 
-  std::string matlab_format_dense_vector(const nb::DRef<const Eigen::VectorXN> &M, const std::string &name = "")
+  std::string matlab_format_dense_vector(const nb::DRef1<const Eigen::VectorXN> &M, const std::string &name = "")
   {
     std::ostringstream oss;
     oss << igl::matlab_format(M, name);

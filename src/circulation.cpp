@@ -14,10 +14,10 @@ namespace pyigl
   auto circulation(
     const int e,
     const bool ccw,
-    const nb::DRef<const Eigen::MatrixXI> &F,
-    const nb::DRef<const Eigen::VectorXI> &EMAP,
-    const nb::DRef<const Eigen::MatrixXI> &EF,
-    const nb::DRef<const Eigen::MatrixXI> &EI)
+    const nb::DRef1<const Eigen::MatrixXI> &F,
+    const nb::DRef1<const Eigen::VectorXI> &EMAP,
+    const nb::DRef1<const Eigen::MatrixXI> &EF,
+    const nb::DRef1<const Eigen::MatrixXI> &EI)
   {
     std::vector<int> Nv, Nf;
     igl::circulation(e, ccw, F, EMAP, EF, EI, Nv, Nf);

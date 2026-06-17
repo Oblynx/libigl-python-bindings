@@ -9,8 +9,8 @@ using namespace nb::literals;
 namespace pyigl
 {
   auto sample_edges(
-    const nb::DRef<const Eigen::MatrixXN> &V,
-    const nb::DRef<const Eigen::MatrixXI> &E,
+    const nb::DRef1<const Eigen::MatrixXN> &V,
+    const nb::DRef1<const Eigen::MatrixXI> &E,
     const int k)
   {
     // igl::sample_edges takes MatrixXd and MatrixXi (int32, ColMajor)

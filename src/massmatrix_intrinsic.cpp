@@ -12,8 +12,8 @@ using namespace nb::literals;
 namespace pyigl
 {
   auto massmatrix_intrinsic(
-    const nb::DRef<const Eigen::MatrixXN> &l,
-    const nb::DRef<const Eigen::MatrixXI> &F,
+    const nb::DRef1<const Eigen::MatrixXN> &l,
+    const nb::DRef1<const Eigen::MatrixXI> &F,
     const igl::MassMatrixType type)
   {
     Eigen::SparseMatrixN M;

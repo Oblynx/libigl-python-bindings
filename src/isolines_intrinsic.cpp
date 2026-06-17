@@ -11,9 +11,9 @@ using namespace nb::literals;
 namespace pyigl
 {
   auto isolines_intrinsic(
-    const nb::DRef<const Eigen::MatrixXI> &F,
-    const nb::DRef<const Eigen::VectorXN> &S,
-    const nb::DRef<const Eigen::VectorXN> &vals)
+    const nb::DRef1<const Eigen::MatrixXI> &F,
+    const nb::DRef1<const Eigen::VectorXN> &S,
+    const nb::DRef1<const Eigen::VectorXN> &vals)
   {
     Eigen::MatrixXN iB;
     Eigen::VectorXI iF;
@@ -23,13 +23,13 @@ namespace pyigl
     return std::make_tuple(iB,iF,iE,I);
   }
   auto isolines_intrinsic_edges(
-    const nb::DRef<const Eigen::MatrixXI> &F,
-    const nb::DRef<const Eigen::VectorXN> &S,
+    const nb::DRef1<const Eigen::MatrixXI> &F,
+    const nb::DRef1<const Eigen::VectorXN> &S,
     const Numeric val,
-    const nb::DRef<const Eigen::MatrixXI> &uE,
-    const nb::DRef<const Eigen::VectorXI> &EMAP,
-    const nb::DRef<const Eigen::VectorXI> &uEC,
-    const nb::DRef<const Eigen::VectorXI> &uEE)
+    const nb::DRef1<const Eigen::MatrixXI> &uE,
+    const nb::DRef1<const Eigen::VectorXI> &EMAP,
+    const nb::DRef1<const Eigen::VectorXI> &uEC,
+    const nb::DRef1<const Eigen::VectorXI> &uEE)
   {
     Eigen::MatrixXN iB;
     Eigen::VectorXI iF;

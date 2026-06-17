@@ -10,8 +10,8 @@ using namespace nb::literals;
 namespace pyigl
 {
   auto procrustes(
-    const nb::DRef<const Eigen::MatrixXN> &X,
-    const nb::DRef<const Eigen::MatrixXN> &Y,
+    const nb::DRef1<const Eigen::MatrixXN> &X,
+    const nb::DRef1<const Eigen::MatrixXN> &Y,
     const bool include_scaling,
     const bool include_reflections)
   {

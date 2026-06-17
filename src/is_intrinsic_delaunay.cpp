@@ -9,8 +9,8 @@ using namespace nb::literals;
 namespace pyigl
 {
   auto is_intrinsic_delaunay(
-      const nb::DRef<const Eigen::MatrixXN> &l,
-      const nb::DRef<const Eigen::MatrixXI> &F)
+      const nb::DRef1<const Eigen::MatrixXN> &l,
+      const nb::DRef1<const Eigen::MatrixXI> &F)
   {
     Eigen::Matrix<unsigned char, Eigen::Dynamic, Eigen::Dynamic> D;
     igl::is_intrinsic_delaunay(l, F, D);

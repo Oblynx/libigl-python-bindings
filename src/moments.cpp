@@ -11,8 +11,8 @@ using namespace nb::literals;
 namespace pyigl
 {
   auto moments(
-    const nb::DRef<const Eigen::MatrixXN> &V,
-    const nb::DRef<const Eigen::MatrixXI> &F)
+    const nb::DRef1<const Eigen::MatrixXN> &V,
+    const nb::DRef1<const Eigen::MatrixXI> &F)
   {
     Numeric m0;
     Eigen::VectorXN m1;

@@ -8,7 +8,7 @@ using namespace nb::literals;
 
 namespace pyigl
 {
-  auto rgb_to_hsv(const nb::DRef<const Eigen::MatrixXN> &R)
+  auto rgb_to_hsv(const nb::DRef1<const Eigen::MatrixXN> &R)
   {
     Eigen::MatrixXN H;
     igl::rgb_to_hsv(R, H);

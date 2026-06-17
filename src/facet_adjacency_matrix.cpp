@@ -10,7 +10,7 @@ using namespace nb::literals;
 namespace pyigl
 {
   // Wrapper for facet_adjacency_matrix with simplicial mesh (F)
-  auto facet_adjacency_matrix(const nb::DRef<const Eigen::MatrixXI> &F)
+  auto facet_adjacency_matrix(const nb::DRef1<const Eigen::MatrixXI> &F)
   {
     Eigen::SparseMatrixI A;
     igl::facet_adjacency_matrix(F, A);

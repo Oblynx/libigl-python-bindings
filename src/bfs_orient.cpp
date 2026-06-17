@@ -11,7 +11,7 @@ using namespace nb::literals;
 namespace pyigl
 {
   auto bfs_orient( 
-    const nb::DRef<const Eigen::MatrixXI> &F)
+    const nb::DRef1<const Eigen::MatrixXI> &F)
   {
     Eigen::MatrixXI FF;
     Eigen::VectorXI C;

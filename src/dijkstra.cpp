@@ -13,7 +13,7 @@ namespace pyigl
 {
   // Dijkstra with uniform edge weights (Euclidean distance via vertex positions)
   auto dijkstra(
-    const nb::DRef<const Eigen::MatrixXN> &V,
+    const nb::DRef1<const Eigen::MatrixXN> &V,
     const std::vector<std::vector<Integer>> &VV,
     const Integer source,
     const std::set<Integer> &targets)
@@ -38,7 +38,7 @@ namespace pyigl
   // Backtrack path from vertex to source
   auto dijkstra_backtrack(
     const Integer vertex,
-    const nb::DRef<const Eigen::MatrixXI> &previous)
+    const nb::DRef1<const Eigen::MatrixXI> &previous)
   {
     // previous[i] single-index access requires IsVectorAtCompileTime — copy to VectorXI
     const Eigen::VectorXI prev = previous.reshaped();

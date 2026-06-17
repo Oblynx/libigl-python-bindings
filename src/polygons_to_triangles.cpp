@@ -11,8 +11,8 @@ using namespace nb::literals;
 namespace pyigl
 {
   auto polygons_to_triangles(
-      const nb::DRef<const Eigen::VectorXI> &I,
-      const nb::DRef<const Eigen::VectorXI> &C)
+      const nb::DRef1<const Eigen::VectorXI> &I,
+      const nb::DRef1<const Eigen::VectorXI> &C)
   {
     Eigen::MatrixXI F;
     Eigen::VectorXI J;

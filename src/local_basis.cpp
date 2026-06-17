@@ -11,8 +11,8 @@ using namespace nb::literals;
 namespace pyigl
 {
   auto local_basis(
-    const nb::DRef<const Eigen::MatrixXN> &V,
-    const nb::DRef<const Eigen::MatrixXI> &F)
+    const nb::DRef1<const Eigen::MatrixXN> &V,
+    const nb::DRef1<const Eigen::MatrixXI> &F)
   {
     Eigen::MatrixXN B1, B2, B3;
     igl::local_basis(V, F, B1, B2, B3);

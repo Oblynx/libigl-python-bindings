@@ -10,8 +10,8 @@ using namespace nb::literals;
 namespace pyigl
 {
   auto edge_topology(
-    const nb::DRef<const Eigen::MatrixXN> &V,
-    const nb::DRef<const Eigen::MatrixXI> &F)
+    const nb::DRef1<const Eigen::MatrixXN> &V,
+    const nb::DRef1<const Eigen::MatrixXI> &F)
   {
     Eigen::MatrixXI EV, FE, EF;
     igl::edge_topology(V, F, EV, FE, EF);

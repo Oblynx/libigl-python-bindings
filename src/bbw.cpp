@@ -12,11 +12,11 @@ namespace pyigl
 {
   // Wrapper for bbw function
   auto bbw(
-    const nb::DRef<const Eigen::MatrixXN> &V,
-    const nb::DRef<const Eigen::MatrixXI> &Ele,
-    const nb::DRef<const Eigen::VectorXI> &b,
-    const nb::DRef<const Eigen::MatrixXN> &bc,
-    const nb::DRef<const Eigen::MatrixXN> &W0,
+    const nb::DRef1<const Eigen::MatrixXN> &V,
+    const nb::DRef1<const Eigen::MatrixXI> &Ele,
+    const nb::DRef1<const Eigen::VectorXI> &b,
+    const nb::DRef1<const Eigen::MatrixXN> &bc,
+    const nb::DRef1<const Eigen::MatrixXN> &W0,
     const bool partition_unity,
     const int verbosity,
     const int max_iter,

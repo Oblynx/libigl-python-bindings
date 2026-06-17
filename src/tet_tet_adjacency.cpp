@@ -9,7 +9,7 @@ using namespace nb::literals;
 
 namespace pyigl
 {
-  auto tet_tet_adjacency(const nb::DRef<const Eigen::MatrixXI> &T)
+  auto tet_tet_adjacency(const nb::DRef1<const Eigen::MatrixXI> &T)
   {
     Eigen::MatrixXI TT, TTi;
     igl::tet_tet_adjacency(T, TT, TTi);

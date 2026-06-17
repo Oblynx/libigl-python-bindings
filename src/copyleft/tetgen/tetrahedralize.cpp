@@ -14,12 +14,12 @@ namespace pyigl
 {
   // Full version with all parameters
   auto tetrahedralize(
-    const nb::DRef<const Eigen::MatrixXN>& V,
-    const nb::DRef<const Eigen::MatrixXI>& F,
-    const nb::DRef<const Eigen::MatrixXN>& H,
-    const nb::DRef<const Eigen::VectorXI>& VM,
-    const nb::DRef<const Eigen::VectorXI>& FM,
-    const nb::DRef<const Eigen::MatrixXN>& R,
+    const nb::DRef1<const Eigen::MatrixXN>& V,
+    const nb::DRef1<const Eigen::MatrixXI>& F,
+    const nb::DRef1<const Eigen::MatrixXN>& H,
+    const nb::DRef1<const Eigen::VectorXI>& VM,
+    const nb::DRef1<const Eigen::VectorXI>& FM,
+    const nb::DRef1<const Eigen::MatrixXN>& R,
     const std::string& flags)
   {
     Eigen::MatrixXN TV;

@@ -8,7 +8,7 @@ using namespace nb::literals;
 
 namespace pyigl {
     auto bounding_box_diagonal(
-	const nb::DRef<const Eigen::MatrixXd>& V
+	const nb::DRef1<const Eigen::MatrixXN>& V
     ) {
 	return igl::bounding_box_diagonal(V);
     }

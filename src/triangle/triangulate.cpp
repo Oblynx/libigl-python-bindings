@@ -13,11 +13,11 @@ using namespace nb::literals;
 namespace pyigl
 {
   auto triangulate(
-    const nb::DRef<const Eigen::MatrixXN> &V,
-    const nb::DRef<const Eigen::MatrixXI> &E,
-    const nb::DRef<const Eigen::MatrixXN> &H,
-    const nb::DRef<const Eigen::VectorXI> &VM,
-    const nb::DRef<const Eigen::VectorXI> &EM,
+    const nb::DRef1<const Eigen::MatrixXN> &V,
+    const nb::DRef1<const Eigen::MatrixXI> &E,
+    const nb::DRef1<const Eigen::MatrixXN> &H,
+    const nb::DRef1<const Eigen::VectorXI> &VM,
+    const nb::DRef1<const Eigen::VectorXI> &EM,
     const std::string &flags)
   {
     Eigen::MatrixXN V2;

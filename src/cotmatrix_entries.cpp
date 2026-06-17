@@ -10,15 +10,15 @@ using namespace nb::literals;
 namespace pyigl
 {
   Eigen::MatrixXN cotmatrix_entries_VF(
-    const nb::DRef<const Eigen::MatrixXN> &V,
-    const nb::DRef<const Eigen::MatrixXI> &F)
+    const nb::DRef1<const Eigen::MatrixXN> &V,
+    const nb::DRef1<const Eigen::MatrixXI> &F)
   {
     Eigen::MatrixXN C;
     igl::cotmatrix_entries(V,F,C);
     return C;
   }
   Eigen::MatrixXN cotmatrix_entries_l(
-    const nb::DRef<const Eigen::MatrixXN> &l)
+    const nb::DRef1<const Eigen::MatrixXN> &l)
   {
     Eigen::MatrixXN C;
     igl::cotmatrix_entries(l,C);

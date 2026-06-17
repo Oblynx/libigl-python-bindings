@@ -11,8 +11,8 @@ namespace pyigl
 {
   // First overload: remesh_self_intersections with detailed outputs
   auto remesh_self_intersections(
-    const nb::DRef<const Eigen::MatrixXN> &V,
-    const nb::DRef<const Eigen::MatrixXI> &F,
+    const nb::DRef1<const Eigen::MatrixXN> &V,
+    const nb::DRef1<const Eigen::MatrixXI> &F,
     const bool detect_only,
     const bool first_only,
     const bool stitch_all,

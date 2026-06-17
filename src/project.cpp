@@ -10,10 +10,10 @@ namespace pyigl
 {
   // Wrapper for project with batch mode
   auto project(
-    const nb::DRef<const Eigen::MatrixXN> &scene,
-    const nb::DRef<const Eigen::MatrixXN> &model,
-    const nb::DRef<const Eigen::MatrixXN> &proj,
-    const nb::DRef<const Eigen::VectorXN> &viewport)
+    const nb::DRef1<const Eigen::MatrixXN> &scene,
+    const nb::DRef1<const Eigen::MatrixXN> &model,
+    const nb::DRef1<const Eigen::MatrixXN> &proj,
+    const nb::DRef1<const Eigen::VectorXN> &viewport)
   {
     Eigen::MatrixXN win;
     igl::project(scene, model, proj, viewport, win);

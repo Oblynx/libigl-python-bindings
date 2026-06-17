@@ -11,8 +11,8 @@ namespace pyigl
 {
   // Wrapper for squared_edge_lengths
   Eigen::MatrixXN squared_edge_lengths(
-    const nb::DRef<const Eigen::MatrixXN> &V,
-    const nb::DRef<const Eigen::MatrixXI> &F)
+    const nb::DRef1<const Eigen::MatrixXN> &V,
+    const nb::DRef1<const Eigen::MatrixXI> &F)
   {
     Eigen::MatrixXN L;
     igl::squared_edge_lengths(V, F, L);
