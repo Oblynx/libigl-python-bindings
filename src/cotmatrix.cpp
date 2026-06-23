@@ -12,8 +12,8 @@ using namespace nb::literals;
 namespace pyigl
 {
   auto cotmatrix(
-    const nb::DRef<const Eigen::MatrixXN> &V,
-    const nb::DRef<const Eigen::MatrixXI> &F)
+    const nb::DRef1<const Eigen::MatrixXN> &V,
+    const nb::DRef1<const Eigen::MatrixXI> &F)
   {
     Eigen::SparseMatrixN L;
     igl::cotmatrix(V,F,L);
@@ -21,9 +21,9 @@ namespace pyigl
   }
 
   auto cotmatrix_polygon(
-    const nb::DRef<const Eigen::MatrixXN> &V,
-    const nb::DRef<const Eigen::VectorXI> &I,
-    const nb::DRef<const Eigen::VectorXI> &C)
+    const nb::DRef1<const Eigen::MatrixXN> &V,
+    const nb::DRef1<const Eigen::VectorXI> &I,
+    const nb::DRef1<const Eigen::VectorXI> &C)
   {
     Eigen::SparseMatrixN L,M,P;
     igl::cotmatrix(V,I,C,L,M,P);

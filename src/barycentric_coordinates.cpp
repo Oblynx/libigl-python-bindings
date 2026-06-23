@@ -12,21 +12,21 @@ namespace pyigl
 {
   // Wrapper for barycentric_coordinates function
   auto barycentric_coordinates_PABC(
-    const nb::DRef<const Eigen::MatrixXN> &P,
-    const nb::DRef<const Eigen::MatrixXN> &A,
-    const nb::DRef<const Eigen::MatrixXN> &B,
-    const nb::DRef<const Eigen::MatrixXN> &C)
+    const nb::DRef1<const Eigen::MatrixXN> &P,
+    const nb::DRef1<const Eigen::MatrixXN> &A,
+    const nb::DRef1<const Eigen::MatrixXN> &B,
+    const nb::DRef1<const Eigen::MatrixXN> &C)
   {
     Eigen::MatrixXN L;
     igl::barycentric_coordinates(P, A, B, C, L);
     return L;
   }
   auto barycentric_coordinates_PABCD(
-    const nb::DRef<const Eigen::MatrixXN> &P,
-    const nb::DRef<const Eigen::MatrixXN> &A,
-    const nb::DRef<const Eigen::MatrixXN> &B,
-    const nb::DRef<const Eigen::MatrixXN> &C,
-    const nb::DRef<const Eigen::MatrixXN> &D)
+    const nb::DRef1<const Eigen::MatrixXN> &P,
+    const nb::DRef1<const Eigen::MatrixXN> &A,
+    const nb::DRef1<const Eigen::MatrixXN> &B,
+    const nb::DRef1<const Eigen::MatrixXN> &C,
+    const nb::DRef1<const Eigen::MatrixXN> &D)
   {
     Eigen::MatrixXN L;
     igl::barycentric_coordinates(P, A, B, C, D, L);

@@ -12,7 +12,7 @@ namespace pyigl
 {
   // Wrapper for is_edge_manifold with overload handling
   auto is_edge_manifold(
-    const nb::DRef<const Eigen::MatrixXI> &F)
+    const nb::DRef1<const Eigen::MatrixXI> &F)
   {
     bool result;
     Eigen::MatrixXI BF;

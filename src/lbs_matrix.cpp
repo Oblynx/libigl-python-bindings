@@ -9,8 +9,8 @@ using namespace nb::literals;
 namespace pyigl
 {
   auto lbs_matrix(
-    const nb::DRef<const Eigen::MatrixXN> &V,
-    const nb::DRef<const Eigen::MatrixXN> &W)
+    const nb::DRef1<const Eigen::MatrixXN> &V,
+    const nb::DRef1<const Eigen::MatrixXN> &W)
   {
     // igl::lbs_matrix takes Eigen::MatrixXd (ColMajor) — copy from RowMajor
     Eigen::MatrixXd v = V, w = W;

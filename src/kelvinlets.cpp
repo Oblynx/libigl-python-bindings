@@ -12,10 +12,10 @@ using namespace nb::literals;
 namespace pyigl
 {
   auto kelvinlets(
-    const nb::DRef<const Eigen::MatrixXN> &V,
-    const nb::DRef<const Eigen::VectorXN> &x0,
-    const nb::DRef<const Eigen::VectorXN> &f,
-    const nb::DRef<const Eigen::MatrixXN> &F,
+    const nb::DRef1<const Eigen::MatrixXN> &V,
+    const nb::DRef1<const Eigen::VectorXN> &x0,
+    const nb::DRef1<const Eigen::VectorXN> &f,
+    const nb::DRef1<const Eigen::MatrixXN> &F,
     const Numeric epsilon,
     const Numeric falloff,
     const igl::BrushType brushType)

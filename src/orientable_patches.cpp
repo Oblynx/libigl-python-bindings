@@ -11,14 +11,14 @@ using namespace nb::literals;
 namespace pyigl
 {
   // Simple overload: just return component ids
-  auto orientable_patches(const nb::DRef<const Eigen::MatrixXI> &F)
+  auto orientable_patches(const nb::DRef1<const Eigen::MatrixXI> &F)
   {
     Eigen::VectorXI C;
     igl::orientable_patches(F, C);
     return C;
   }
   // With adjacency matrix
-  auto orientable_patches_with_adj(const nb::DRef<const Eigen::MatrixXI> &F)
+  auto orientable_patches_with_adj(const nb::DRef1<const Eigen::MatrixXI> &F)
   {
     Eigen::VectorXI C;
     Eigen::SparseMatrix<Numeric> A;

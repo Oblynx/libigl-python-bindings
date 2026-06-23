@@ -14,12 +14,12 @@ namespace pyigl
   // Hopefully this will avoid a copy by matching the type in lipschitz_octree_prune
   using MatrixNX3R = Eigen::Matrix<Numeric, Eigen::Dynamic, 3, Eigen::RowMajor>;
   auto lipschitz_octree(
-    const nb::DRef<const Eigen::VectorXN> &origin,
+    const nb::DRef1<const Eigen::VectorXN> &origin,
     const Numeric h0,
     const Integer max_depth,
     const nb::typed<
       nb::callable,
-      Eigen::VectorXN(const nb::DRef<const MatrixNX3R> &)> & udf)
+      Eigen::VectorXN(const nb::DRef1<const MatrixNX3R> &)> & udf)
   {
     Eigen::MatrixXI ijk;
     // Instead of MatrixXN if use use MatrixNX3R we might avoid a copy

@@ -10,7 +10,7 @@ using namespace nb::literals;
 namespace pyigl
 {
   auto split_nonmanifold(
-    const nb::DRef<const Eigen::MatrixXI> & F)
+    const nb::DRef1<const Eigen::MatrixXI> & F)
   {
     Eigen::MatrixXI SF;
     Eigen::VectorXI SVI;
@@ -18,8 +18,8 @@ namespace pyigl
     return std::make_tuple(SF, SVI);
   }
   auto split_nonmanifold_VF(
-    const nb::DRef<const Eigen::MatrixXN> & V,
-    const nb::DRef<const Eigen::MatrixXI> & F)
+    const nb::DRef1<const Eigen::MatrixXN> & V,
+    const nb::DRef1<const Eigen::MatrixXI> & F)
   {
     Eigen::MatrixXI SF;
     Eigen::MatrixXN SV;

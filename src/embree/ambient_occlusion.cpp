@@ -11,10 +11,10 @@ using namespace nb::literals;
 namespace pyigl
 {
   auto ambient_occlusion(
-    const nb::DRef<const Eigen::MatrixXN> &V,
-    const nb::DRef<const Eigen::MatrixXI> &F,
-    const nb::DRef<const Eigen::MatrixXN> &P,
-    const nb::DRef<const Eigen::MatrixXN> &N,
+    const nb::DRef1<const Eigen::MatrixXN> &V,
+    const nb::DRef1<const Eigen::MatrixXI> &F,
+    const nb::DRef1<const Eigen::MatrixXN> &P,
+    const nb::DRef1<const Eigen::MatrixXN> &N,
     const int num_samples)
   {
     Eigen::VectorXN S;
@@ -23,8 +23,8 @@ namespace pyigl
   }
   auto ambient_occlusion_ei(
     const igl::embree::EmbreeIntersector & ei,
-    const nb::DRef<const Eigen::MatrixXN> &P,
-    const nb::DRef<const Eigen::MatrixXN> &N,
+    const nb::DRef1<const Eigen::MatrixXN> &P,
+    const nb::DRef1<const Eigen::MatrixXN> &N,
     const int num_samples)
   {
     Eigen::VectorXN S;

@@ -9,10 +9,10 @@ using namespace nb::literals;
 namespace pyigl
 {
   auto solid_angle(
-    const nb::DRef<const Eigen::MatrixXN> &A,
-    const nb::DRef<const Eigen::MatrixXN> &B,
-    const nb::DRef<const Eigen::MatrixXN> &C,
-    const nb::DRef<const Eigen::MatrixXN> &P)
+    const nb::DRef1<const Eigen::MatrixXN> &A,
+    const nb::DRef1<const Eigen::MatrixXN> &B,
+    const nb::DRef1<const Eigen::MatrixXN> &C,
+    const nb::DRef1<const Eigen::MatrixXN> &P)
   {
     // igl uses single-index access — copy to VectorXd
     const Eigen::VectorXd a = A.reshaped(), b = B.reshaped();

@@ -13,9 +13,9 @@ using namespace nb::literals;
 namespace pyigl
 {
   auto signed_distance(
-    const nb::DRef<const Eigen::MatrixXN> &P,
-    const nb::DRef<const Eigen::MatrixXN> &V,
-    const nb::DRef<const Eigen::MatrixXI> &F,
+    const nb::DRef1<const Eigen::MatrixXN> &P,
+    const nb::DRef1<const Eigen::MatrixXN> &V,
+    const nb::DRef1<const Eigen::MatrixXI> &F,
     const igl::SignedDistanceType sign_type,
     const Numeric lower_bound = -std::numeric_limits<Numeric>::infinity(),
     const Numeric upper_bound = std::numeric_limits<Numeric>::infinity())

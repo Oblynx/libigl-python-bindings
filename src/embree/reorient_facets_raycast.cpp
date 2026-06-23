@@ -11,8 +11,8 @@ using namespace nb::literals;
 namespace pyigl
 {
   auto reorient_facets_raycast(
-    const nb::DRef<const Eigen::MatrixXN> &V,
-    const nb::DRef<const Eigen::MatrixXI> &F,
+    const nb::DRef1<const Eigen::MatrixXN> &V,
+    const nb::DRef1<const Eigen::MatrixXI> &F,
     const int rays_total_,
     const int rays_minimum,
     const bool facet_wise,

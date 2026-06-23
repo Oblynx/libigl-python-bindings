@@ -11,8 +11,8 @@ namespace pyigl
 {
   bool writeOFF(
     const std::string &filename,
-    const nb::DRef<const Eigen::MatrixXN> &V,
-    const nb::DRef<const Eigen::MatrixXI> &F)
+    const nb::DRef1<const Eigen::MatrixXN> &V,
+    const nb::DRef1<const Eigen::MatrixXI> &F)
   {
     if (!igl::writeOFF(filename, V, F))
       throw std::runtime_error("Failed to write OFF file: " + filename);
@@ -20,9 +20,9 @@ namespace pyigl
   }
   bool writeOFF_C(
     const std::string &filename,
-    const nb::DRef<const Eigen::MatrixXN> &V,
-    const nb::DRef<const Eigen::MatrixXI> &F,
-    const nb::DRef<const Eigen::MatrixXN> &C)
+    const nb::DRef1<const Eigen::MatrixXN> &V,
+    const nb::DRef1<const Eigen::MatrixXI> &F,
+    const nb::DRef1<const Eigen::MatrixXN> &C)
   {
     if (!igl::writeOFF(filename, V, F, C))
       throw std::runtime_error("Failed to write OFF file: " + filename);

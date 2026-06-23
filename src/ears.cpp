@@ -10,7 +10,7 @@ using namespace nb::literals;
 namespace pyigl
 {
   auto ears(
-    const nb::DRef<const Eigen::MatrixXI> & F)
+    const nb::DRef1<const Eigen::MatrixXI> & F)
   {
     Eigen::VectorXI ear,ear_opp;
     igl::ears(F,ear,ear_opp);

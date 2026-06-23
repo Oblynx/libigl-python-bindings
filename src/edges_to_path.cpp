@@ -9,7 +9,7 @@ using namespace nb::literals;
 
 namespace pyigl
 {
-  auto edges_to_path(const nb::DRef<const Eigen::MatrixXI> &E)
+  auto edges_to_path(const nb::DRef1<const Eigen::MatrixXI> &E)
   {
     // igl::edges_to_path internally uses Eigen::Map<DerivedE>(vE.data(), ...) where
     // vE is Eigen::VectorXi (int32). Must use Eigen::MatrixXi (int32, ColMajor).

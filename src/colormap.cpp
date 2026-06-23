@@ -11,7 +11,7 @@ namespace pyigl
   // Map scalar array to RGB colors using a colormap
   auto colormap(
     const igl::ColorMapType cm,
-    const nb::DRef<const Eigen::VectorXN> &Z,
+    const nb::DRef1<const Eigen::VectorXN> &Z,
     const bool normalize)
   {
     Eigen::MatrixXN C;

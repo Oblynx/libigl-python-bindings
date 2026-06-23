@@ -9,12 +9,12 @@ using namespace nb::literals;
 namespace pyigl
 {
   auto quadprog(
-    const nb::DRef<const Eigen::MatrixXN> &G,
-    const nb::DRef<const Eigen::VectorXN> &g0,
-    const nb::DRef<const Eigen::MatrixXN> &CE,
-    const nb::DRef<const Eigen::VectorXN> &ce0,
-    const nb::DRef<const Eigen::MatrixXN> &CI,
-    const nb::DRef<const Eigen::VectorXN> &ci0)
+    const nb::DRef1<const Eigen::MatrixXN> &G,
+    const nb::DRef1<const Eigen::VectorXN> &g0,
+    const nb::DRef1<const Eigen::MatrixXN> &CE,
+    const nb::DRef1<const Eigen::VectorXN> &ce0,
+    const nb::DRef1<const Eigen::MatrixXN> &CI,
+    const nb::DRef1<const Eigen::VectorXN> &ci0)
   {
     // quadprog uses non-template MatrixXd (col-major); copy from row-major inputs
     Eigen::MatrixXd G_d = G, CE_d = CE, CI_d = CI;

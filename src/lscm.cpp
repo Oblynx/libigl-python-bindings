@@ -11,10 +11,10 @@ using namespace nb::literals;
 namespace pyigl
 {
   auto lscm(
-    const nb::DRef<const Eigen::MatrixXN> &V,
-    const nb::DRef<const Eigen::MatrixXI> &F,
-    const nb::DRef<const Eigen::VectorXI> &b,
-    const nb::DRef<const Eigen::MatrixXN> &bc)
+    const nb::DRef1<const Eigen::MatrixXN> &V,
+    const nb::DRef1<const Eigen::MatrixXI> &F,
+    const nb::DRef1<const Eigen::VectorXI> &b,
+    const nb::DRef1<const Eigen::MatrixXN> &bc)
   {
     Eigen::MatrixXN V_uv;
     Eigen::SparseMatrix<Numeric> Q;

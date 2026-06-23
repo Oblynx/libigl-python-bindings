@@ -11,7 +11,7 @@ using namespace nb::literals;
 
 namespace pyigl
 {
-  auto boundary_facets( const nb::DRef<const Eigen::MatrixXI> &T)
+  auto boundary_facets( const nb::DRef1<const Eigen::MatrixXI> &T)
   {
     Eigen::MatrixXI F;
     Eigen::VectorXI J;

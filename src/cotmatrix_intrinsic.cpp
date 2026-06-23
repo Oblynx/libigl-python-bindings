@@ -12,8 +12,8 @@ using namespace nb::literals;
 namespace pyigl
 {
   auto cotmatrix_intrinsic(
-    const nb::DRef<const Eigen::MatrixXN> &l,
-    const nb::DRef<const Eigen::MatrixXI> &F)
+    const nb::DRef1<const Eigen::MatrixXN> &l,
+    const nb::DRef1<const Eigen::MatrixXI> &F)
   {
     Eigen::SparseMatrixN L;
     igl::cotmatrix_intrinsic(l,F,L);

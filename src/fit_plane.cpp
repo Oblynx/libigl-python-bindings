@@ -9,7 +9,7 @@ using namespace nb::literals;
 
 namespace pyigl
 {
-  auto fit_plane(const nb::DRef<const Eigen::MatrixXN> &V)
+  auto fit_plane(const nb::DRef1<const Eigen::MatrixXN> &V)
   {
     Eigen::RowVector3d N, C;
     igl::fit_plane(V, N, C);

@@ -11,12 +11,12 @@ using namespace nb::literals;
 namespace pyigl
 {
   auto mesh_with_skeleton(
-    const nb::DRef<const Eigen::MatrixXN> &V,
-    const nb::DRef<const Eigen::MatrixXI> &F,
-    const nb::DRef<const Eigen::MatrixXN> &C,
-    const nb::DRef<const Eigen::VectorXI> &P,
-    const nb::DRef<const Eigen::MatrixXI> &BE,
-    const nb::DRef<const Eigen::MatrixXI> &CE,
+    const nb::DRef1<const Eigen::MatrixXN> &V,
+    const nb::DRef1<const Eigen::MatrixXI> &F,
+    const nb::DRef1<const Eigen::MatrixXN> &C,
+    const nb::DRef1<const Eigen::VectorXI> &P,
+    const nb::DRef1<const Eigen::MatrixXI> &BE,
+    const nb::DRef1<const Eigen::MatrixXI> &CE,
     const int samples_per_bone,
     const std::string &tetgen_flags)
   {

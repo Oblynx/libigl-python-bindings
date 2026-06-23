@@ -10,10 +10,10 @@ using namespace nb::literals;
 namespace pyigl
 {
   auto iterative_closest_point(
-    const nb::DRef<const Eigen::MatrixXN> &VX,
-    const nb::DRef<const Eigen::MatrixXI> &FX,
-    const nb::DRef<const Eigen::MatrixXN> &VY,
-    const nb::DRef<const Eigen::MatrixXI> &FY,
+    const nb::DRef1<const Eigen::MatrixXN> &VX,
+    const nb::DRef1<const Eigen::MatrixXI> &FX,
+    const nb::DRef1<const Eigen::MatrixXN> &VY,
+    const nb::DRef1<const Eigen::MatrixXI> &FY,
     const int num_samples,
     const int max_iters)
   {

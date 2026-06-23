@@ -16,8 +16,8 @@ namespace pyigl
     ray_mesh_intersect(
     const Eigen::VectorXN &source,
     const Eigen::VectorXN &dir,
-    const nb::DRef<const Eigen::MatrixXN> &V,
-    const nb::DRef<const Eigen::MatrixXI> &F,
+    const nb::DRef1<const Eigen::MatrixXN> &V,
+    const nb::DRef1<const Eigen::MatrixXI> &F,
     const bool first = false)
   {
     std::vector<std::tuple<Integer,Numeric,Numeric,Numeric>> out;

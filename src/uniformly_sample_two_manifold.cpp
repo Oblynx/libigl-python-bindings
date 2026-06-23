@@ -9,8 +9,8 @@ using namespace nb::literals;
 namespace pyigl
 {
   auto uniformly_sample_two_manifold(
-    const nb::DRef<const Eigen::MatrixXN> &W,
-    const nb::DRef<const Eigen::MatrixXI> &F,
+    const nb::DRef1<const Eigen::MatrixXN> &W,
+    const nb::DRef1<const Eigen::MatrixXI> &F,
     const int k,
     const Numeric push)
   {

@@ -10,8 +10,8 @@ using namespace nb::literals;
 namespace pyigl
 {
   auto marching_cubes(
-    const nb::DRef<const Eigen::VectorXN> &values,
-    const nb::DRef<const Eigen::MatrixXN> &points,
+    const nb::DRef1<const Eigen::VectorXN> &values,
+    const nb::DRef1<const Eigen::MatrixXN> &points,
     const Integer x_res,
     const Integer y_res,
     const Integer z_res,
@@ -26,9 +26,9 @@ namespace pyigl
     return std::make_tuple(vertices, faces);
   }
   auto marching_cubes_indexed(
-    const nb::DRef<const Eigen::VectorXN> &values,
-    const nb::DRef<const Eigen::MatrixXN> &points,
-    const nb::DRef<const Eigen::MatrixXI> &indices,
+    const nb::DRef1<const Eigen::VectorXN> &values,
+    const nb::DRef1<const Eigen::MatrixXN> &points,
+    const nb::DRef1<const Eigen::MatrixXI> &indices,
     const Numeric isovalue)
   {
     Eigen::MatrixXN vertices;

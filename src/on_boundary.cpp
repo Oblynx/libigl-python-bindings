@@ -11,7 +11,7 @@ using namespace nb::literals;
 namespace pyigl
 {
   auto on_boundary(
-    const nb::DRef<const Eigen::MatrixXI> &T)
+    const nb::DRef1<const Eigen::MatrixXI> &T)
   {
     Eigen::VectorX<bool> I;              // Output: boundary indicator for each element
     Eigen::Matrix<bool, Eigen::Dynamic, Eigen::Dynamic> C;  // Output: boundary facets per element

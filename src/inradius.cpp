@@ -10,8 +10,8 @@ using namespace nb::literals;
 namespace pyigl
 {
   auto inradius(
-    const nb::DRef<const Eigen::MatrixXN> & V,
-    const nb::DRef<const Eigen::MatrixXI> & F)
+    const nb::DRef1<const Eigen::MatrixXN> & V,
+    const nb::DRef1<const Eigen::MatrixXI> & F)
   {
     Eigen::VectorXN R;
     igl::inradius(V, F, R);

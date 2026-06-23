@@ -11,31 +11,31 @@ namespace pyigl
 {
   // Helper: DRef → RowVector3d (igl tri_tri uses RowVector3D=Matrix<Scalar,1,3> internally)
   // Reshaped has no .data(); copy to VectorXd first
-  static Eigen::RowVector3d to3d(const nb::DRef<const Eigen::MatrixXN> &v) {
+  static Eigen::RowVector3d to3d(const nb::DRef1<const Eigen::MatrixXN> &v) {
     const Eigen::VectorXd tmp = v.reshaped();
     return Eigen::RowVector3d(tmp.data());
   }
 
   // 3D overlap test only
   auto tri_tri_overlap_test_3d(
-    const nb::DRef<const Eigen::MatrixXN> &p1,
-    const nb::DRef<const Eigen::MatrixXN> &q1,
-    const nb::DRef<const Eigen::MatrixXN> &r1,
-    const nb::DRef<const Eigen::MatrixXN> &p2,
-    const nb::DRef<const Eigen::MatrixXN> &q2,
-    const nb::DRef<const Eigen::MatrixXN> &r2)
+    const nb::DRef1<const Eigen::MatrixXN> &p1,
+    const nb::DRef1<const Eigen::MatrixXN> &q1,
+    const nb::DRef1<const Eigen::MatrixXN> &r1,
+    const nb::DRef1<const Eigen::MatrixXN> &p2,
+    const nb::DRef1<const Eigen::MatrixXN> &q2,
+    const nb::DRef1<const Eigen::MatrixXN> &r2)
   {
     return igl::tri_tri_overlap_test_3d(
       to3d(p1), to3d(q1), to3d(r1), to3d(p2), to3d(q2), to3d(r2));
   }
   // 3D intersection test with segment
   auto tri_tri_intersection_test_3d(
-    const nb::DRef<const Eigen::MatrixXN> &p1,
-    const nb::DRef<const Eigen::MatrixXN> &q1,
-    const nb::DRef<const Eigen::MatrixXN> &r1,
-    const nb::DRef<const Eigen::MatrixXN> &p2,
-    const nb::DRef<const Eigen::MatrixXN> &q2,
-    const nb::DRef<const Eigen::MatrixXN> &r2)
+    const nb::DRef1<const Eigen::MatrixXN> &p1,
+    const nb::DRef1<const Eigen::MatrixXN> &q1,
+    const nb::DRef1<const Eigen::MatrixXN> &r1,
+    const nb::DRef1<const Eigen::MatrixXN> &p2,
+    const nb::DRef1<const Eigen::MatrixXN> &q2,
+    const nb::DRef1<const Eigen::MatrixXN> &r2)
   {
     bool coplanar;
     // tri_tri_intersection_test_3d uses RowVector3D=Matrix<Scalar,1,3> internally —

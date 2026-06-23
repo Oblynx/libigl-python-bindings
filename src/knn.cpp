@@ -12,13 +12,13 @@ using namespace nb::literals;
 namespace pyigl
 {
   auto knn(
-    const nb::DRef<const Eigen::MatrixXN> &P,
-    const nb::DRef<const Eigen::MatrixXN> &V,
+    const nb::DRef1<const Eigen::MatrixXN> &P,
+    const nb::DRef1<const Eigen::MatrixXN> &V,
     const Integer k,
     const std::vector<std::vector<Integer>> &point_indices,
-    const nb::DRef<const Eigen::MatrixXI> &CH,
-    const nb::DRef<const Eigen::MatrixXN> &CN,
-    const nb::DRef<const Eigen::VectorXN> &W)
+    const nb::DRef1<const Eigen::MatrixXI> &CH,
+    const nb::DRef1<const Eigen::MatrixXN> &CN,
+    const nb::DRef1<const Eigen::VectorXN> &W)
   {
     Eigen::MatrixXI I;
     igl::knn(P,V,k,point_indices,CH,CN,W,I);

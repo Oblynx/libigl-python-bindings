@@ -13,8 +13,8 @@ using namespace nb::literals;
 namespace pyigl
 {
   auto marching_cubes(
-    const nb::DRef<const Eigen::VectorXN> &S,
-    const nb::DRef<const Eigen::MatrixXN> &GV,
+    const nb::DRef1<const Eigen::VectorXN> &S,
+    const nb::DRef1<const Eigen::MatrixXN> &GV,
     const unsigned nx,
     const unsigned ny,
     const unsigned nz,
@@ -28,9 +28,9 @@ namespace pyigl
   }
 
   auto marching_cubes_sparse(
-    const nb::DRef<const Eigen::VectorXN> &S,
-    const nb::DRef<const Eigen::MatrixXN> &GV,
-    const nb::DRef<const Eigen::MatrixXI> &GI,
+    const nb::DRef1<const Eigen::VectorXN> &S,
+    const nb::DRef1<const Eigen::MatrixXN> &GV,
+    const nb::DRef1<const Eigen::MatrixXI> &GI,
     const Numeric isovalue)
   {
     Eigen::MatrixXN V;

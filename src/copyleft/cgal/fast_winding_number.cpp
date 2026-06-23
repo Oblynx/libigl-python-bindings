@@ -11,9 +11,9 @@ namespace pyigl
 {
   // Overload with `expansion_order` and `beta`
   auto fast_winding_number(
-    const nb::DRef<const Eigen::MatrixXN> &P,
-    const nb::DRef<const Eigen::MatrixXN> &N,
-    const nb::DRef<const Eigen::MatrixXN> &Q,
+    const nb::DRef1<const Eigen::MatrixXN> &P,
+    const nb::DRef1<const Eigen::MatrixXN> &N,
+    const nb::DRef1<const Eigen::MatrixXN> &Q,
     int expansion_order,
     double beta)
   {

@@ -9,8 +9,8 @@ using namespace nb::literals;
 namespace pyigl
 {
   auto rotation_matrix_from_directions(
-    const nb::DRef<const Eigen::MatrixXN> &v0,
-    const nb::DRef<const Eigen::MatrixXN> &v1)
+    const nb::DRef1<const Eigen::MatrixXN> &v0,
+    const nb::DRef1<const Eigen::MatrixXN> &v1)
   {
     Eigen::Matrix<Numeric, 3, 1> a = v0.reshaped(3,1);
     Eigen::Matrix<Numeric, 3, 1> b = v1.reshaped(3,1);

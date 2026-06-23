@@ -10,7 +10,7 @@ using namespace nb::literals;
 namespace pyigl
 {
   auto polar_svd(
-    const nb::DRef<const Eigen::MatrixXN > &A,
+    const nb::DRef1<const Eigen::MatrixXN > &A,
     bool include_reflections)
   {
     Eigen::MatrixXN R, T, U, V;

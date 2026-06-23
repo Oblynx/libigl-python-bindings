@@ -9,7 +9,7 @@ using namespace nb::literals;
 void bind_turning_number(nb::module_ &m)
 {
   m.def("turning_number",
-    [](const nb::DRef<const Eigen::MatrixXN> &V) -> Numeric {
+    [](const nb::DRef1<const Eigen::MatrixXN> &V) -> Numeric {
       return igl::turning_number(V);
     },
     "V"_a,

@@ -10,9 +10,9 @@ using namespace nb::literals;
 namespace pyigl
 {
   auto rigid_alignment(
-    const nb::DRef<const Eigen::MatrixXN> &X,
-    const nb::DRef<const Eigen::MatrixXN> &P,
-    const nb::DRef<const Eigen::MatrixXN> &N)
+    const nb::DRef1<const Eigen::MatrixXN> &X,
+    const nb::DRef1<const Eigen::MatrixXN> &P,
+    const nb::DRef1<const Eigen::MatrixXN> &N)
   {
     // t is used as rowwise row vector in igl — use RowVectorXd (MaxRowsAtCompileTime==1)
     Eigen::MatrixXd R;

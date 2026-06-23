@@ -9,8 +9,8 @@ using namespace nb::literals;
 namespace pyigl
 {
   auto flood_fill(
-    const nb::DRef<const Eigen::MatrixXI> &res,
-    const nb::DRef<const Eigen::VectorXN> &S_in)
+    const nb::DRef1<const Eigen::MatrixXI> &res,
+    const nb::DRef1<const Eigen::VectorXN> &S_in)
   {
     // flood_fill modifies S in place; copy in/out
     Eigen::VectorXN S = S_in;

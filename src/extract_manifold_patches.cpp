@@ -9,7 +9,7 @@ using namespace nb::literals;
 
 namespace pyigl
 {
-  auto extract_manifold_patches(const nb::DRef<const Eigen::MatrixXI> &F)
+  auto extract_manifold_patches(const nb::DRef1<const Eigen::MatrixXI> &F)
   {
     Eigen::VectorXI P;
     int n = igl::extract_manifold_patches(F, P);

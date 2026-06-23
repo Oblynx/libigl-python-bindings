@@ -14,7 +14,7 @@ namespace pyigl
 {
   auto collapse_edge(
     const Integer e,
-    const nb::DRef<const Eigen::RowVectorXN> &p,
+    const nb::DRef1<const Eigen::RowVectorXN> &p,
     Eigen::Ref<Eigen::MatrixXN> V,
     Eigen::Ref<Eigen::MatrixXI> F,
     Eigen::Ref<Eigen::MatrixXI> E,

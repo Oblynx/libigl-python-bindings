@@ -10,7 +10,7 @@ namespace pyigl
 {
   // Single parameter t
   auto bezier_t(
-    const nb::DRef<const Eigen::MatrixXN> &V,
+    const nb::DRef1<const Eigen::MatrixXN> &V,
     const Numeric t)
   {
     Eigen::MatrixXN P;
@@ -19,8 +19,8 @@ namespace pyigl
   }
   // Array of parameters T
   auto bezier_T(
-    const nb::DRef<const Eigen::MatrixXN> &V,
-    const nb::DRef<const Eigen::MatrixXN> &T)
+    const nb::DRef1<const Eigen::MatrixXN> &V,
+    const nb::DRef1<const Eigen::MatrixXN> &T)
   {
     // Copy T to compact vector for single-index access
     const Eigen::VectorXN t = T.reshaped();

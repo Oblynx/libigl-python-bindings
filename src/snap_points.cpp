@@ -10,8 +10,8 @@ using namespace nb::literals;
 namespace pyigl
 {
   auto snap_points(
-    const nb::DRef<const Eigen::MatrixXN> &C,
-    const nb::DRef<const Eigen::MatrixXN> &V)
+    const nb::DRef1<const Eigen::MatrixXN> &C,
+    const nb::DRef1<const Eigen::MatrixXN> &V)
   {
     Eigen::VectorXI I;
     Eigen::VectorXN minD;

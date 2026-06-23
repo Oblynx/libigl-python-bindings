@@ -9,10 +9,10 @@ using namespace nb::literals;
 namespace pyigl
 {
   auto bone_visible(
-    const nb::DRef<const Eigen::MatrixXN> &V,
-    const nb::DRef<const Eigen::MatrixXI> &F,
-    const nb::DRef<const Eigen::VectorXN> &s,
-    const nb::DRef<const Eigen::VectorXN> &d)
+    const nb::DRef1<const Eigen::MatrixXN> &V,
+    const nb::DRef1<const Eigen::MatrixXI> &F,
+    const nb::DRef1<const Eigen::VectorXN> &s,
+    const nb::DRef1<const Eigen::VectorXN> &d)
   {
     // int32 required; s/d must be column vectors (VectorXd), not row vectors
     Eigen::MatrixXi Fi = F.cast<int>();

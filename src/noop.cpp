@@ -11,8 +11,8 @@ using namespace nb::literals;
 namespace pyigl
 {
   auto noop(
-    const nb::DRef<const Eigen::MatrixXN> &N,
-    const nb::DRef<const Eigen::MatrixXI> &I,
+    const nb::DRef1<const Eigen::MatrixXN> &N,
+    const nb::DRef1<const Eigen::MatrixXI> &I,
     const Eigen::SparseMatrixN &SN,
     const Eigen::SparseMatrixI &SI)
   {

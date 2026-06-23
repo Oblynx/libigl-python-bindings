@@ -10,25 +10,25 @@ using namespace nb::literals;
 namespace pyigl
 {
   auto volume_VT(
-    const nb::DRef<const Eigen::MatrixXN> &V = Eigen::MatrixXN(),
-    const nb::DRef<const Eigen::MatrixXI> &T = Eigen::MatrixXI())
+    const nb::DRef1<const Eigen::MatrixXN> &V = Eigen::MatrixXN(),
+    const nb::DRef1<const Eigen::MatrixXI> &T = Eigen::MatrixXI())
   {
     Eigen::VectorXN vol;
     igl::volume(V, T, vol);
     return vol;
   }
   auto volume_L(
-    const nb::DRef<const Eigen::MatrixXN> &L = Eigen::MatrixXN())
+    const nb::DRef1<const Eigen::MatrixXN> &L = Eigen::MatrixXN())
   {
     Eigen::VectorXN vol;
     igl::volume(L, vol);
     return vol;
   }
   auto volume_ABCD(
-    const nb::DRef<const Eigen::MatrixXN> &A = Eigen::MatrixXN(),
-    const nb::DRef<const Eigen::MatrixXN> &B = Eigen::MatrixXN(),
-    const nb::DRef<const Eigen::MatrixXN> &C = Eigen::MatrixXN(),
-    const nb::DRef<const Eigen::MatrixXN> &D = Eigen::MatrixXN())
+    const nb::DRef1<const Eigen::MatrixXN> &A = Eigen::MatrixXN(),
+    const nb::DRef1<const Eigen::MatrixXN> &B = Eigen::MatrixXN(),
+    const nb::DRef1<const Eigen::MatrixXN> &C = Eigen::MatrixXN(),
+    const nb::DRef1<const Eigen::MatrixXN> &D = Eigen::MatrixXN())
   {
     Eigen::VectorXN vol;
     igl::volume(A, B, C, D, vol);

@@ -8,7 +8,7 @@ using namespace nb::literals;
 
 namespace pyigl
 {
-  auto delaunay_triangulation(const nb::DRef<const Eigen::MatrixXN> &V)
+  auto delaunay_triangulation(const nb::DRef1<const Eigen::MatrixXN> &V)
   {
     Eigen::MatrixXi F;  // int32 required by libigl internals
     igl::copyleft::cgal::delaunay_triangulation(V, F);

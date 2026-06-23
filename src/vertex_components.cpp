@@ -10,7 +10,7 @@ namespace pyigl
 {
   // Wrapper for vertex_components with face indices
   auto vertex_components(
-    const nb::DRef<const Eigen::MatrixXI> &F)
+    const nb::DRef1<const Eigen::MatrixXI> &F)
   {
     Eigen::VectorXI C;
     igl::vertex_components(F, C);

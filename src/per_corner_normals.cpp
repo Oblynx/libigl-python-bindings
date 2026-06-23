@@ -9,8 +9,8 @@ using namespace nb::literals;
 namespace pyigl
 {
   auto per_corner_normals(
-    const nb::DRef<const Eigen::MatrixXN> &V,
-    const nb::DRef<const Eigen::MatrixXI> &F,
+    const nb::DRef1<const Eigen::MatrixXN> &V,
+    const nb::DRef1<const Eigen::MatrixXI> &F,
     const Numeric corner_threshold_degrees)
   {
     Eigen::MatrixXN CN;

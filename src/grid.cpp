@@ -10,7 +10,7 @@ using namespace nb::literals;
 namespace pyigl
 {
   // Wrapper for igl::grid
-  auto grid(const nb::DRef<const Eigen::VectorXI> &res)
+  auto grid(const nb::DRef1<const Eigen::VectorXI> &res)
   {
     Eigen::MatrixXN GV;
     igl::grid(res, GV);

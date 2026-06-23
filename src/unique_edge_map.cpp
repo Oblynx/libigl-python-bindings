@@ -11,7 +11,7 @@ using namespace nb::literals;
 
 namespace pyigl
 {
-  auto unique_edge_map(const nb::DRef<const Eigen::MatrixXI> &F)
+  auto unique_edge_map(const nb::DRef1<const Eigen::MatrixXI> &F)
   {
     Eigen::MatrixXI E;
     Eigen::MatrixXI uE;
@@ -21,7 +21,7 @@ namespace pyigl
     return nb::make_tuple(E, uE, EMAP, uEC, uEE);
   }
 
-  auto unique_edge_map_lists( const nb::DRef<const Eigen::MatrixXI> &F)
+  auto unique_edge_map_lists( const nb::DRef1<const Eigen::MatrixXI> &F)
   {
     Eigen::MatrixXI E;
     Eigen::MatrixXI uE;

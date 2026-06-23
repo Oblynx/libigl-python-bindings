@@ -10,7 +10,7 @@ using namespace nb::literals;
 void bind_is_irregular_vertex(nb::module_ &m)
 {
   m.def("is_irregular_vertex",
-    [](const nb::DRef<const Eigen::MatrixXI> &F) -> std::vector<bool> {
+    [](const nb::DRef1<const Eigen::MatrixXI> &F) -> std::vector<bool> {
       return igl::is_irregular_vertex(F);
     },
     "F"_a,

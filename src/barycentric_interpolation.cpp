@@ -9,10 +9,10 @@ using namespace nb::literals;
 namespace pyigl
 {
   auto barycentric_interpolation(
-    const nb::DRef<const Eigen::MatrixXN> &D,
-    const nb::DRef<const Eigen::MatrixXI> &F,
-    const nb::DRef<const Eigen::MatrixXN> &B,
-    const nb::DRef<const Eigen::MatrixXI> &I)
+    const nb::DRef1<const Eigen::MatrixXN> &D,
+    const nb::DRef1<const Eigen::MatrixXI> &F,
+    const nb::DRef1<const Eigen::MatrixXN> &B,
+    const nb::DRef1<const Eigen::MatrixXI> &I)
   {
     // I is indexed as a vector internally
     const Eigen::VectorXI idx = I.reshaped();

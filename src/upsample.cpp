@@ -12,7 +12,7 @@ namespace pyigl
 {
   // Wrapper for the first overload of upsample that computes S and newF
   auto upsample_matrix(
-    const nb::DRef<const Eigen::MatrixXI> &F,
+    const nb::DRef1<const Eigen::MatrixXI> &F,
     int n_)
   {
     const auto n = n_? n_ : F.maxCoeff() + 1;
@@ -24,8 +24,8 @@ namespace pyigl
 
   // Wrapper for the second overload of upsample that returns NV and NF
   auto upsample(
-    const nb::DRef<const Eigen::MatrixXN> &V,
-    const nb::DRef<const Eigen::MatrixXI> &F,
+    const nb::DRef1<const Eigen::MatrixXN> &V,
+    const nb::DRef1<const Eigen::MatrixXI> &F,
     int number_of_subdivs)
   {
     Eigen::MatrixXN NV;

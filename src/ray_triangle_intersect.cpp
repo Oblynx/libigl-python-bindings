@@ -10,11 +10,11 @@ using namespace nb::literals;
 namespace pyigl
 {
   auto ray_triangle_intersect(
-    const nb::DRef<const Eigen::MatrixXN> &O,
-    const nb::DRef<const Eigen::MatrixXN> &D,
-    const nb::DRef<const Eigen::MatrixXN> &V0,
-    const nb::DRef<const Eigen::MatrixXN> &V1,
-    const nb::DRef<const Eigen::MatrixXN> &V2,
+    const nb::DRef1<const Eigen::MatrixXN> &O,
+    const nb::DRef1<const Eigen::MatrixXN> &D,
+    const nb::DRef1<const Eigen::MatrixXN> &V0,
+    const nb::DRef1<const Eigen::MatrixXN> &V1,
+    const nb::DRef1<const Eigen::MatrixXN> &V2,
     const Numeric epsilon)
   {
     // igl requires vector types (Dynamic×1 or similar) — copy from 2D DRef

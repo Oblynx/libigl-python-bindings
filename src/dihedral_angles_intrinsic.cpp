@@ -10,8 +10,8 @@ using namespace nb::literals;
 namespace pyigl
 {
   auto dihedral_angles_intrinsic(
-    const nb::DRef<const Eigen::MatrixXN>& A,
-    const nb::DRef<const Eigen::MatrixXN>& L)
+    const nb::DRef1<const Eigen::MatrixXN>& A,
+    const nb::DRef1<const Eigen::MatrixXN>& L)
   {
     Eigen::MatrixXN theta, cos_theta;
     igl::dihedral_angles_intrinsic(A, L, theta, cos_theta);

@@ -8,7 +8,7 @@ using namespace nb::literals;
 
 namespace pyigl
 {
-  auto face_occurrences(const nb::DRef<const Eigen::MatrixXI> &F)
+  auto face_occurrences(const nb::DRef1<const Eigen::MatrixXI> &F)
   {
     Eigen::VectorXI C;
     igl::face_occurrences(F, C);

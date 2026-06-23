@@ -11,8 +11,8 @@ using namespace nb::literals;
 namespace pyigl
 {
   auto cdt(
-    const nb::DRef<const Eigen::MatrixXN> &V,
-    const nb::DRef<const Eigen::MatrixXI> &E,
+    const nb::DRef1<const Eigen::MatrixXN> &V,
+    const nb::DRef1<const Eigen::MatrixXI> &E,
     const std::string &flags)
   {
     // int32 required by libigl triangle internals

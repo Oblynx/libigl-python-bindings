@@ -11,9 +11,9 @@ using namespace nb::literals;
 namespace pyigl
 {
   auto point_areas(
-    const nb::DRef<const Eigen::MatrixXN> &P,
-    const nb::DRef<const Eigen::MatrixXI> &I,
-    const nb::DRef<const Eigen::MatrixXN> &N)
+    const nb::DRef1<const Eigen::MatrixXN> &P,
+    const nb::DRef1<const Eigen::MatrixXI> &I,
+    const nb::DRef1<const Eigen::MatrixXN> &N)
   {
     Eigen::VectorXN A;
     Eigen::MatrixXN T;

@@ -9,9 +9,9 @@ using namespace nb::literals;
 namespace pyigl
 {
   auto fast_winding_number(
-    const nb::DRef<const Eigen::MatrixXN> &V,
-    const nb::DRef<const Eigen::MatrixXI> &F,
-    const nb::DRef<const Eigen::MatrixXN> &Q)
+    const nb::DRef1<const Eigen::MatrixXN> &V,
+    const nb::DRef1<const Eigen::MatrixXI> &F,
+    const nb::DRef1<const Eigen::MatrixXN> &Q)
   {
     Eigen::VectorXN W; // Winding number values for each query point
     igl::fast_winding_number(V, F, Q, W);

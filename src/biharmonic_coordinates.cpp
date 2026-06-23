@@ -11,8 +11,8 @@ using namespace nb::literals;
 namespace pyigl
 {
   auto biharmonic_coordinates(
-    const nb::DRef<const Eigen::MatrixXN> &V,
-    const nb::DRef<const Eigen::MatrixXI> &T,
+    const nb::DRef1<const Eigen::MatrixXN> &V,
+    const nb::DRef1<const Eigen::MatrixXI> &T,
     const std::vector<std::vector<Integer>> &S,
     const int k)
   {

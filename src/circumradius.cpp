@@ -10,8 +10,8 @@ using namespace nb::literals;
 namespace pyigl
 {
   auto circumradius(
-    const nb::DRef<const Eigen::MatrixXN> & V ,
-    const nb::DRef<const Eigen::MatrixXI> & T)
+    const nb::DRef1<const Eigen::MatrixXN> & V ,
+    const nb::DRef1<const Eigen::MatrixXI> & T)
   {
     Eigen::VectorXN R;
     Eigen::MatrixXN C,B;

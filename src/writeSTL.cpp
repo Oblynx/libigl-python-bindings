@@ -12,8 +12,8 @@ namespace pyigl
 {
   bool writeSTL(
     const std::string &filename,
-    const nb::DRef<const Eigen::MatrixXN> &V,
-    const nb::DRef<const Eigen::MatrixXI> &F,
+    const nb::DRef1<const Eigen::MatrixXN> &V,
+    const nb::DRef1<const Eigen::MatrixXI> &F,
     const bool binary)
   {
     auto enc = binary ? igl::FileEncoding::Binary : igl::FileEncoding::Ascii;

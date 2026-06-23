@@ -10,8 +10,8 @@ using namespace nb::literals;
 namespace pyigl
 {
   auto outer_hull(
-    const nb::DRef<const Eigen::MatrixXN> &V,
-    const nb::DRef<const Eigen::MatrixXI> &F)
+    const nb::DRef1<const Eigen::MatrixXN> &V,
+    const nb::DRef1<const Eigen::MatrixXI> &F)
   {
     // int32 required by libigl internals
     Eigen::MatrixXi Fi = F.cast<int>();

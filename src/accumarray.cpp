@@ -9,8 +9,8 @@ using namespace nb::literals;
 namespace pyigl
 {
   auto accumarray_V(
-    const nb::DRef<const Eigen::MatrixXI> &S,
-    const nb::DRef<const Eigen::MatrixXN> &V)
+    const nb::DRef1<const Eigen::MatrixXI> &S,
+    const nb::DRef1<const Eigen::MatrixXN> &V)
   {
     // Copy to compact column vectors so single-index (i) access works
     const Eigen::VectorXI s = S.reshaped();
@@ -20,7 +20,7 @@ namespace pyigl
     return A;
   }
   auto accumarray_val(
-    const nb::DRef<const Eigen::MatrixXI> &S,
+    const nb::DRef1<const Eigen::MatrixXI> &S,
     const Numeric val)
   {
     const Eigen::VectorXI s = S.reshaped();

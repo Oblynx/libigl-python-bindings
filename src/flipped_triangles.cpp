@@ -9,8 +9,8 @@ using namespace nb::literals;
 namespace pyigl
 {
   auto flipped_triangles(
-    const nb::DRef<const Eigen::MatrixXN> &V,
-    const nb::DRef<const Eigen::MatrixXI> &F)
+    const nb::DRef1<const Eigen::MatrixXN> &V,
+    const nb::DRef1<const Eigen::MatrixXI> &F)
   {
     Eigen::VectorXI X;
     igl::flipped_triangles(V, F, X);

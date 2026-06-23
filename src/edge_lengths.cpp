@@ -11,8 +11,8 @@ namespace pyigl
 {
   // Wrapper for edge_lengths function
   auto edge_lengths(
-    const nb::DRef<const Eigen::MatrixXN> &V,
-    const nb::DRef<const Eigen::MatrixXI> &F)
+    const nb::DRef1<const Eigen::MatrixXN> &V,
+    const nb::DRef1<const Eigen::MatrixXI> &F)
   {
     Eigen::MatrixXN L;
     igl::edge_lengths(V, F, L);

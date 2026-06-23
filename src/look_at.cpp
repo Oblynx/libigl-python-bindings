@@ -9,9 +9,9 @@ using namespace nb::literals;
 namespace pyigl
 {
   auto look_at(
-    const nb::DRef<const Eigen::MatrixXN> &eye,
-    const nb::DRef<const Eigen::MatrixXN> &center,
-    const nb::DRef<const Eigen::MatrixXN> &up)
+    const nb::DRef1<const Eigen::MatrixXN> &eye,
+    const nb::DRef1<const Eigen::MatrixXN> &center,
+    const nb::DRef1<const Eigen::MatrixXN> &up)
   {
     // look_at uses cross() which requires IsVectorAtCompileTime — copy to Vector3d
     Eigen::Vector3d e = eye.reshaped(3,1);

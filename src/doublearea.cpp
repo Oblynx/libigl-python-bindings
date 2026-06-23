@@ -12,24 +12,24 @@ namespace pyigl
 {
   // Wrapper for doublearea function
   auto doublearea_VF(
-    const nb::DRef<const Eigen::MatrixXN> &V,
-    const nb::DRef<const Eigen::MatrixXI> &F)
+    const nb::DRef1<const Eigen::MatrixXN> &V,
+    const nb::DRef1<const Eigen::MatrixXI> &F)
   {
     Eigen::VectorXN dblA;
     igl::doublearea(V, F, dblA);
     return dblA;
   }
   auto doublearea_ABC(
-    const nb::DRef<const Eigen::MatrixXN> &A,
-    const nb::DRef<const Eigen::MatrixXN> &B,
-    const nb::DRef<const Eigen::MatrixXN> &C)
+    const nb::DRef1<const Eigen::MatrixXN> &A,
+    const nb::DRef1<const Eigen::MatrixXN> &B,
+    const nb::DRef1<const Eigen::MatrixXN> &C)
   {
     Eigen::VectorXN dblA;
     igl::doublearea(A, B, C, dblA);
     return dblA;
   }
   auto doublearea_l(
-    const nb::DRef<const Eigen::MatrixXN> &l,
+    const nb::DRef1<const Eigen::MatrixXN> &l,
     const Numeric nan_replacement)
   {
     Eigen::VectorXN dblA;

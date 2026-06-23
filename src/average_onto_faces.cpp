@@ -10,8 +10,8 @@ using namespace nb::literals;
 namespace pyigl
 {
   auto average_onto_faces(
-    const nb::DRef<const Eigen::MatrixXI> &F,
-    const nb::DRef<const Eigen::VectorXN> &S)
+    const nb::DRef1<const Eigen::MatrixXI> &F,
+    const nb::DRef1<const Eigen::VectorXN> &S)
   {
     Eigen::VectorXN SF;
     igl::average_onto_faces(F,S,SF);

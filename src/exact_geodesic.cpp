@@ -11,12 +11,12 @@ namespace pyigl
 {
   // Wrapper for the exact_geodesic function
   Eigen::VectorXN exact_geodesic(
-    const nb::DRef<const Eigen::MatrixXN> &V,
-    const nb::DRef<const Eigen::MatrixXI> &F,
-    const nb::DRef<const Eigen::VectorXI> &VS,
-    const nb::DRef<const Eigen::VectorXI> &FS,
-    const nb::DRef<const Eigen::VectorXI> &VT,
-    const nb::DRef<const Eigen::VectorXI> &FT)
+    const nb::DRef1<const Eigen::MatrixXN> &V,
+    const nb::DRef1<const Eigen::MatrixXI> &F,
+    const nb::DRef1<const Eigen::VectorXI> &VS,
+    const nb::DRef1<const Eigen::VectorXI> &FS,
+    const nb::DRef1<const Eigen::VectorXI> &VT,
+    const nb::DRef1<const Eigen::VectorXI> &FT)
   {
     Eigen::VectorXN D;
     igl::exact_geodesic(V, F, VS, FS, VT, FT, D);

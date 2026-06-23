@@ -9,10 +9,10 @@ using namespace nb::literals;
 namespace pyigl
 {
   auto line_mesh_intersection(
-    const nb::DRef<const Eigen::MatrixXN> &V_source,
-    const nb::DRef<const Eigen::MatrixXN> &N_source,
-    const nb::DRef<const Eigen::MatrixXN> &V_target,
-    const nb::DRef<const Eigen::MatrixXI> &F_target)
+    const nb::DRef1<const Eigen::MatrixXN> &V_source,
+    const nb::DRef1<const Eigen::MatrixXN> &N_source,
+    const nb::DRef1<const Eigen::MatrixXN> &V_target,
+    const nb::DRef1<const Eigen::MatrixXI> &F_target)
   {
     // Explicit template instantiation: copies to col-major double/int
     Eigen::MatrixXd vs = V_source, ns = N_source, vt = V_target;

@@ -11,10 +11,10 @@ namespace pyigl
 {
   // Overload with point and normal
   auto intersect_with_half_space_point_normal(
-    const nb::DRef<const Eigen::MatrixXN> &V,
-    const nb::DRef<const Eigen::MatrixXI> &F,
-    const nb::DRef<const Eigen::VectorXN> &p,
-    const nb::DRef<const Eigen::VectorXN> &n)
+    const nb::DRef1<const Eigen::MatrixXN> &V,
+    const nb::DRef1<const Eigen::MatrixXI> &F,
+    const nb::DRef1<const Eigen::VectorXN> &p,
+    const nb::DRef1<const Eigen::VectorXN> &n)
   {
     Eigen::MatrixXN VC;
     Eigen::MatrixXI FC;
@@ -29,9 +29,9 @@ namespace pyigl
 
   // Overload with plane equation
   auto intersect_with_half_space_equation(
-    const nb::DRef<const Eigen::MatrixXN> &V,
-    const nb::DRef<const Eigen::MatrixXI> &F,
-    const nb::DRef<const Eigen::VectorXN> &equ)
+    const nb::DRef1<const Eigen::MatrixXN> &V,
+    const nb::DRef1<const Eigen::MatrixXI> &F,
+    const nb::DRef1<const Eigen::VectorXN> &equ)
   {
     Eigen::MatrixXN VC;
     Eigen::MatrixXI FC;

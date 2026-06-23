@@ -8,7 +8,7 @@ using namespace nb::literals;
 
 namespace pyigl
 {
-  bool coplanar(const nb::DRef<const Eigen::MatrixXN> &V)
+  bool coplanar(const nb::DRef1<const Eigen::MatrixXN> &V)
   {
     return igl::copyleft::cgal::coplanar(V);
   }

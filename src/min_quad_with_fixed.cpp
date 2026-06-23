@@ -12,11 +12,11 @@ namespace pyigl
 {
   auto min_quad_with_fixed(
     const Eigen::SparseMatrixN &A,
-    const nb::DRef<const Eigen::MatrixXN> &B,
-    const nb::DRef<const Eigen::VectorXI> &known,
-    const nb::DRef<const Eigen::MatrixXN> &Y,
+    const nb::DRef1<const Eigen::MatrixXN> &B,
+    const nb::DRef1<const Eigen::VectorXI> &known,
+    const nb::DRef1<const Eigen::MatrixXN> &Y,
     const Eigen::SparseMatrixN &Aeq,
-    const nb::DRef<const Eigen::MatrixXN> &Beq,
+    const nb::DRef1<const Eigen::MatrixXN> &Beq,
     const bool pd)
   {
     Eigen::MatrixXN Z;
@@ -32,7 +32,7 @@ namespace pyigl
 
   void min_quad_with_fixed_precompute(
     const Eigen::SparseMatrixN &A,
-    const nb::DRef<const Eigen::VectorXI>  &known,
+    const nb::DRef1<const Eigen::VectorXI>  &known,
     const Eigen::SparseMatrixN &Aeq,
     const bool pd,
     igl::min_quad_with_fixed_data<Numeric> &data)
@@ -45,9 +45,9 @@ namespace pyigl
 
   auto min_quad_with_fixed_solve(
     const igl::min_quad_with_fixed_data<Numeric> &data,
-    const nb::DRef<const Eigen::MatrixXN> &B,
-    const nb::DRef<const Eigen::MatrixXN> &Y,
-    const nb::DRef<const Eigen::MatrixXN> &Beq)
+    const nb::DRef1<const Eigen::MatrixXN> &B,
+    const nb::DRef1<const Eigen::MatrixXN> &Y,
+    const nb::DRef1<const Eigen::MatrixXN> &Beq)
   {
     Eigen::MatrixXN Z;
     if(!igl::min_quad_with_fixed_solve(data, B, Y, Beq, Z))

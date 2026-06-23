@@ -11,8 +11,8 @@ using namespace nb::literals;
 namespace pyigl
 {
   auto principal_curvature(
-    const nb::DRef<const Eigen::MatrixXN> &V,
-    const nb::DRef<const Eigen::MatrixXI> &F,
+    const nb::DRef1<const Eigen::MatrixXN> &V,
+    const nb::DRef1<const Eigen::MatrixXI> &F,
     unsigned radius = 5,
     bool useKring = true)
   {

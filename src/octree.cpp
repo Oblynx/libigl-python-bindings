@@ -11,7 +11,7 @@ using namespace nb::literals;
 
 namespace pyigl
 {
-  auto octree(const nb::DRef<const Eigen::MatrixXN> &P)
+  auto octree(const nb::DRef1<const Eigen::MatrixXN> &P)
   {
     Eigen::MatrixXI CH;
     Eigen::MatrixXN CN;

@@ -11,7 +11,7 @@ namespace pyigl
 {
   // Wrapper for the first overload of adjacency_list for triangle meshes
   auto adjacency_list(
-    const nb::DRef<const Eigen::MatrixXI> &F,
+    const nb::DRef1<const Eigen::MatrixXI> &F,
     bool sorted)
   {
     std::vector<std::vector<Integer>> A;

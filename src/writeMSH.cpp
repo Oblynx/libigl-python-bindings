@@ -14,11 +14,11 @@ namespace pyigl
 {
   void writeMSH(
     const std::filesystem::path &mesh_file_name,
-    const nb::DRef<const Eigen::MatrixXN> &V,
-    const nb::DRef<const Eigen::MatrixXI> &Tri,
-    const nb::DRef<const Eigen::MatrixXI> &Tet,
-    const nb::DRef<const Eigen::VectorXI> &TriTag,
-    const nb::DRef<const Eigen::VectorXI> &TetTag)
+    const nb::DRef1<const Eigen::MatrixXN> &V,
+    const nb::DRef1<const Eigen::MatrixXI> &Tri,
+    const nb::DRef1<const Eigen::MatrixXI> &Tet,
+    const nb::DRef1<const Eigen::VectorXI> &TriTag,
+    const nb::DRef1<const Eigen::VectorXI> &TetTag)
   {
     std::vector<Eigen::MatrixXN> XF;
     std::vector<std::string> XFields;

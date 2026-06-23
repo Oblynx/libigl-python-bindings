@@ -10,10 +10,10 @@ using namespace nb::literals;
 namespace pyigl
 {
   auto average_from_edges_onto_vertices(
-    const nb::DRef<const Eigen::MatrixXI> &F,
-    const nb::DRef<const Eigen::MatrixXI> &E,
-    const nb::DRef<const Eigen::MatrixXI> &oE,
-    const nb::DRef<const Eigen::VectorXN> &uE)
+    const nb::DRef1<const Eigen::MatrixXI> &F,
+    const nb::DRef1<const Eigen::MatrixXI> &E,
+    const nb::DRef1<const Eigen::MatrixXI> &oE,
+    const nb::DRef1<const Eigen::VectorXN> &uE)
   {
     Eigen::VectorXN uV;
     igl::average_from_edges_onto_vertices(F, E, oE, uE, uV);

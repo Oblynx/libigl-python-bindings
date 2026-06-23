@@ -12,9 +12,9 @@ namespace pyigl
 {
   // Binding for winding_number over multiple query points
   auto winding_number(
-    const nb::DRef<const Eigen::MatrixXN> &V,
-    const nb::DRef<const Eigen::MatrixXI> &F,
-    const nb::DRef<const Eigen::MatrixXN> &O)
+    const nb::DRef1<const Eigen::MatrixXN> &V,
+    const nb::DRef1<const Eigen::MatrixXI> &F,
+    const nb::DRef1<const Eigen::MatrixXN> &O)
   {
     Eigen::VectorXN W;
     // The DerivedF on WindingNumberAABB and WindingNumberTree is 
@@ -27,9 +27,9 @@ namespace pyigl
   }
   // Binding for winding_number over multiple query points
   Numeric winding_number_single(
-    const nb::DRef<const Eigen::MatrixXN> &V,
-    const nb::DRef<const Eigen::MatrixXI> &F,
-    const nb::DRef<const Eigen::VectorXN> &o)
+    const nb::DRef1<const Eigen::MatrixXN> &V,
+    const nb::DRef1<const Eigen::MatrixXI> &F,
+    const nb::DRef1<const Eigen::VectorXN> &o)
   {
     return igl::winding_number(V, F, o.transpose());
   }

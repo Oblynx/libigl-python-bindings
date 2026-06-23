@@ -13,10 +13,10 @@ using namespace nb::literals;
 namespace pyigl
 {
   auto mesh_boolean(
-    const nb::DRef<const Eigen::MatrixXN> &VA,
-    const nb::DRef<const Eigen::MatrixXI> &FA,
-    const nb::DRef<const Eigen::MatrixXN> &VB,
-    const nb::DRef<const Eigen::MatrixXI> &FB,
+    const nb::DRef1<const Eigen::MatrixXN> &VA,
+    const nb::DRef1<const Eigen::MatrixXI> &FA,
+    const nb::DRef1<const Eigen::MatrixXN> &VB,
+    const nb::DRef1<const Eigen::MatrixXI> &FB,
     const std::string &type_str)
   {
     Eigen::MatrixXN VC;
