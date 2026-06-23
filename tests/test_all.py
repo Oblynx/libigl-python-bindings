@@ -157,6 +157,31 @@ def test_normals_and_distances():
     S,I,C,N = igl.signed_distance(P,V,F,sign_type=igl.SignedDistanceType.SIGNED_DISTANCE_TYPE_FAST_WINDING_NUMBER)
     BC = igl.barycenter(V,F)
 
+def test_dref1_noncontiguous_fallback():
+    # Regression for the nb::DRef1 adoption (nanobind#1263 / #1378): DRef1 fixes
+    # the inner stride to 1, so non-C-contiguous inputs no longer bind zero-copy
+    # and must instead go through nanobind's copy fallback. Results must be
+    # identical regardless of input memory layout.
+    V,F = igl.icosahedron()
+    V = np.ascontiguousarray(V, dtype=np.float64)
+    F = np.ascontiguousarray(F, dtype=np.int64)
+    assert V.flags["C_CONTIGUOUS"] and F.flags["C_CONTIGUOUS"]
+
+    FN_c = igl.per_face_normals(V, F)
+    dblA_c = igl.doublearea(V, F)
+
+    # F-contiguous (column-major) views have a non-unit inner stride, exercising
+    # the copy fallback for both the float64 and int64 matrix inputs.
+    V_f = np.asfortranarray(V)
+    F_f = np.asfortranarray(F)
+    assert not V_f.flags["C_CONTIGUOUS"] and not F_f.flags["C_CONTIGUOUS"]
+
+    FN_f = igl.per_face_normals(V_f, F_f)
+    dblA_f = igl.doublearea(V_f, F_f)
+
+    assert np.allclose(FN_c, FN_f)
+    assert np.allclose(dblA_c, dblA_f)
+
 def test_harmonic():
     V,F = triangulated_square()
     b = np.array([0,3],dtype=np.int64)
